@@ -12,6 +12,7 @@ class ContanctsCell: UITableViewCell {
     let nameLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14)
+        label.textColor = .red
         return label
     }()
     
@@ -24,6 +25,7 @@ class ContanctsCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        setupCell()
     }
     
     required init?(coder: NSCoder) {
