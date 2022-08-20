@@ -52,6 +52,11 @@ extension ViewController: UITableViewDataSource {
         return cell
         
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        contats[indexPath.section].remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .left)
+    }
 }
 
 extension ViewController: UITableViewDelegate {
