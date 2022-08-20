@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var contats = Source.makeContacts()
+    var contats = Source.makeContactsWithGroup()
     
     let tableView: UITableView = .init()
     
@@ -27,15 +27,27 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        contats.count
+    func numberOfSections(in tableView: UITableView) -> Int {
+        2
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        contats[section].count
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch section {
+        case 0: return "Group 1"
+        case 1: return "Group 2"
+        default: return nil
+        }
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ContanctsCell", for: indexPath) as? ContanctsCell else { fatalError() }
         
-        cell.config(contact: contats[indexPath.row])
+        //cell.config(contact: contats[indexPath.row])
+        cell.config(contact: contats[indexPath.section][indexPath.row])
         
         return cell
         

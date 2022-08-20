@@ -47,7 +47,6 @@ struct Source {
             .init(name: "Nastia", description: Description.descriptionFemale, gender: .female),
             .init(name: "Violeta", description: Description.descriptionFemale, gender: .female),
             .init(name: "Katia", description: Description.descriptionFemale, gender: .female),
-            
         ]
     }
     
