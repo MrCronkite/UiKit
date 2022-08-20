@@ -72,7 +72,15 @@ extension ViewController: UITableViewDataSource {
 }
 
 extension ViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let alert = UIAlertController(
+            title: contats[indexPath.section][indexPath.row].name,
+            message: contats[indexPath.section][indexPath.row].description,
+            preferredStyle: .alert
+        )
+        alert.addAction(.init(title: "ok", style: .default, handler: nil))
+        present(alert, animated: true)
+    }
 }
 
 extension ViewController {
@@ -111,7 +119,10 @@ extension ViewController {
     
     
     @objc func edit(sender: UIButton){
-        tableView.isEditing.toggle()
-        editButton.setTitle(tableView.isEditing ? "end edit" : "edit", for: .normal)
+        contats = Source.makeContactsWithGroup()
+        tableView.reloadData()
+//        tableView.isEditing.toggle()
+//        editButton.setTitle(tableView.isEditing ? "end edit" : "edit", for: .normal)
     }
+    
 }
