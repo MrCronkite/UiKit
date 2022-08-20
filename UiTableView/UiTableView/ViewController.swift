@@ -12,15 +12,18 @@ class ViewController: UIViewController {
     var contats = Source.makeContactsWithGroup()
     
     let tableView: UITableView = .init()
+    let editButton = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        setupButton()
         
         tableView.register(ContanctsCell.self, forCellReuseIdentifier: "ContanctsCell")
         
         tableView.dataSource = self
         tableView.delegate = self
+        
     }
 
 
@@ -57,6 +60,15 @@ extension ViewController: UITableViewDataSource {
         contats[indexPath.section].remove(at: indexPath.row)
         tableView.deleteRows(at: [indexPath], with: .left)
     }
+    
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let contact = contats[sourceIndexPath.section].remove(at: sourceIndexPath.row)
+        contats[destinationIndexPath.section].insert(contact, at: destinationIndexPath.row)
+    }
 }
 
 extension ViewController: UITableViewDelegate {
@@ -71,7 +83,35 @@ extension ViewController {
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tableView.topAnchor.constraint(equalTo: view.topAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+          //  tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
+    }
+}
+
+extension ViewController {
+    func setupButton(){
+        view.addSubview(editButton)
+        editButton.translatesAutoresizingMaskIntoConstraints = false
+        editButton.setTitleColor(.black, for: .normal)
+        editButton.setTitleColor(.gray, for: .highlighted)
+        NSLayoutConstraint.activate([
+            editButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            editButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            editButton.topAnchor.constraint(equalTo: tableView.bottomAnchor, constant: 8),
+            editButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -16)
+        ])
+        
+        editButton.setTitle("edit", for: .normal)
+        editButton.addTarget(self, action: #selector(edit(sender:)), for: .touchUpInside)
+        
+        editButton.layer.cornerRadius = 15
+        editButton.layer.borderColor = UIColor.black.cgColor
+        editButton.layer.borderWidth = 1
+    }
+    
+    
+    @objc func edit(sender: UIButton){
+        tableView.isEditing.toggle()
+        editButton.setTitle(tableView.isEditing ? "end edit" : "edit", for: .normal)
     }
 }
