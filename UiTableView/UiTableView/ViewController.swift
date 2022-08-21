@@ -11,8 +11,10 @@ class ViewController: UIViewController {
     
     var contats = Source.makeContactsWithGroup()
     
-    let tableView: UITableView = .init()
+    let tableView: UITableView = .init(frame: .zero, style: .insetGrouped)
     let editButton = UIButton()
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +25,11 @@ class ViewController: UIViewController {
         
         tableView.dataSource = self
         tableView.delegate = self
+        
+        tableView.estimatedRowHeight = 50
+        tableView.separatorStyle = .singleLine
+        tableView.separatorColor = .red
+        tableView.separatorInset = .init(top: 0, left: 16, bottom: 0, right: 16)
         
     }
 
