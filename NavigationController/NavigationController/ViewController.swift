@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    let content = Source.makeContact()
+    
     private let tableView: UITableView = {
         let table = UITableView()
         table.register(CustomTableViewCell.self, forCellReuseIdentifier: CustomTableViewCell.identifire)
@@ -29,16 +31,17 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        10
+        content.count
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(
+        guard let cell = tableView.dequeueReusableCell(
             withIdentifier: CustomTableViewCell.identifire,
-            for: indexPath
-        ) as? CustomTableViewCell ?? UITableViewCell()
+            for: indexPath) as? CustomTableViewCell else { fatalError() }
+        
+        cell.config(contact: content[indexPath.row])
         
         return cell
     }
