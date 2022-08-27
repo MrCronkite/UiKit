@@ -25,6 +25,14 @@ class ViewController: UIViewController {
         tableView.dataSource = self
     }
     
+    func alertView(title: String, message: String, style: UIAlertController.Style ){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: style)
+        let alertAction = UIAlertAction(title: "ok", style: .default)
+        
+        present(alert, animated: true)
+        alert.addAction(alertAction)
+    }
+    
 }
 
 
@@ -51,10 +59,16 @@ extension ViewController: UITableViewDataSource {
 extension ViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let alert = UIAlertController(title: "hello", message: "\(indexPath.row)", preferredStyle: .alert)
-        let alertAction = UIAlertAction(title: "ok", style: .default)
         
-        present(alert, animated: true)
-        alert.addAction(alertAction)
+        //alertView(title: "hello", message: "\(indexPath.row)", style: .actionSheet)
+        
+        let storyboard = UIStoryboard(name: "secondStoryboard", bundle: nil)
+        guard let vc2 = storyboard.instantiateViewController(withIdentifier: "VC2") as?
+                SecondViewController else { return }
+        vc2.index = "\(indexPath.row)"
+        show(vc2, sender: nil)
+        
+        
+        
     }
 }
