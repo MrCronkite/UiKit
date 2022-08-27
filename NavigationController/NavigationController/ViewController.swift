@@ -28,7 +28,7 @@ class ViewController: UIViewController {
 }
 
 
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
+extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         content.count
@@ -46,5 +46,15 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+}
+
+extension ViewController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let alert = UIAlertController(title: "hello", message: "\(indexPath.row)", preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "ok", style: .default)
+        
+        present(alert, animated: true)
+        alert.addAction(alertAction)
+    }
 }
