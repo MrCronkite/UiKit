@@ -17,13 +17,28 @@ class ViewController: UIViewController {
         return textF
     }()
     
+    let button: UIButton = {
+       let button = UIButton()
+        button.frame = CGRect(x: 170, y: 160, width: 70, height: 20)
+        button.setTitle("Registr", for: .normal)
+        button.setTitleColor(.yellow, for: .normal)
+        button.backgroundColor = .systemGreen
+      return button
+    }()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.center = textField.center
         view.addSubview(textField)
+        
+        button.addTarget(self, action: #selector(sendData), for: .touchUpInside)
+        view.addSubview(button)
     }
    
 
+    
+    @objc func sendData(){
+        print("hello world")
+    }
 }
 
