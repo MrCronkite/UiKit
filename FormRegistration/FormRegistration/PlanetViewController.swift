@@ -11,6 +11,9 @@ class PlanetViewController: UIViewController {
     
     let key = "YB7LyF73Zh2MXfhsUObruDZtRbf9JDGIpQ5q2Dpi"
     
+    @IBOutlet weak var textField: UITextView!
+    @IBOutlet weak var imageView: UIImageView!
+    
     let contentApod: [Apod] = []
 
     override func viewDidLoad() {
@@ -33,7 +36,18 @@ class PlanetViewController: UIViewController {
             
             do{
                 let data = try JSONDecoder().decode(Apod.self, from: data)
-                print(data.explanation)
+                DispatchQueue.main.async {
+                    self.textField.text = data.explanation
+                }
+                
+                DispatchQueue.global().async {
+                    guard let imageUrl = URL(string: data.url) else { return }
+                    guard let imageData = try? Data(contentsOf: imageUrl) else { return }
+                           
+                           DispatchQueue.main.async {
+                               self.imageView.image = UIImage(data: imageData)
+                           }
+                       }
             } catch {
                 print(error)
             }
