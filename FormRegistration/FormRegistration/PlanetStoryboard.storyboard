@@ -15,8 +15,23 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6o3-CI-THW">
+                                <rect key="frame" x="174" y="128" width="67" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="GET:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="T93-8r-FrD"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="6o3-CI-THW" secondAttribute="trailing" constant="173" id="0H6-sR-LDK"/>
+                            <constraint firstItem="6o3-CI-THW" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="174" id="5nP-Kz-7il"/>
+                            <constraint firstItem="6o3-CI-THW" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="84" id="uxn-z2-GWS"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
