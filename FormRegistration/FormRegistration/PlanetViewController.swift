@@ -10,6 +10,8 @@ import UIKit
 class PlanetViewController: UIViewController {
     
     let key = "YB7LyF73Zh2MXfhsUObruDZtRbf9JDGIpQ5q2Dpi"
+    
+    let contentApod: [Apod] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,8 +32,8 @@ class PlanetViewController: UIViewController {
                 print( data )
             
             do{
-                let json =  try JSONSerialization.jsonObject(with: data, options: [])
-                print(json)
+                let data = try JSONDecoder().decode(Apod.self, from: data)
+                print(data.explanation)
             } catch {
                 print(error)
             }
