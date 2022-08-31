@@ -13,6 +13,8 @@
 		B27651C428BE66BA005E95F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B27651C228BE66BA005E95F7 /* Main.storyboard */; };
 		B27651C628BE66BC005E95F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B27651C528BE66BC005E95F7 /* Assets.xcassets */; };
 		B27651C928BE66BC005E95F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B27651C728BE66BC005E95F7 /* LaunchScreen.storyboard */; };
+		B2AF942D28BFDA7700E93E8A /* PlanetStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2AF942C28BFDA7700E93E8A /* PlanetStoryboard.storyboard */; };
+		B2AF942F28BFDAA200E93E8A /* PlanetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AF942E28BFDAA200E93E8A /* PlanetViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		B27651C528BE66BC005E95F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B27651C828BE66BC005E95F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B27651CA28BE66BC005E95F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2AF942C28BFDA7700E93E8A /* PlanetStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PlanetStoryboard.storyboard; sourceTree = "<group>"; };
+		B2AF942E28BFDAA200E93E8A /* PlanetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 			children = (
 				B27651BC28BE66BA005E95F7 /* AppDelegate.swift */,
 				B27651BE28BE66BA005E95F7 /* SceneDelegate.swift */,
+				B2AF942C28BFDA7700E93E8A /* PlanetStoryboard.storyboard */,
+				B2AF942E28BFDAA200E93E8A /* PlanetViewController.swift */,
 				B27651C028BE66BA005E95F7 /* ViewController.swift */,
 				B27651C228BE66BA005E95F7 /* Main.storyboard */,
 				B27651C528BE66BC005E95F7 /* Assets.xcassets */,
@@ -128,6 +134,7 @@
 				B27651C928BE66BC005E95F7 /* LaunchScreen.storyboard in Resources */,
 				B27651C628BE66BC005E95F7 /* Assets.xcassets in Resources */,
 				B27651C428BE66BA005E95F7 /* Main.storyboard in Resources */,
+				B2AF942D28BFDA7700E93E8A /* PlanetStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2AF942F28BFDAA200E93E8A /* PlanetViewController.swift in Sources */,
 				B27651C128BE66BA005E95F7 /* ViewController.swift in Sources */,
 				B27651BD28BE66BA005E95F7 /* AppDelegate.swift in Sources */,
 				B27651BF28BE66BA005E95F7 /* SceneDelegate.swift in Sources */,

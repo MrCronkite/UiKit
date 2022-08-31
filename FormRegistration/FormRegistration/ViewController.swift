@@ -38,7 +38,9 @@ class ViewController: UIViewController {
 
     
     @objc func sendData(){
-        print("hello world")
+        let storyboardPlane = UIStoryboard(name: "PlanetStoryboard", bundle: nil)
+        guard let PlanetVC = storyboardPlane.instantiateViewController(withIdentifier: "PlanetVC") as? PlanetViewController else { return }
+        show(PlanetVC, sender: nil)
     }
 }
 
