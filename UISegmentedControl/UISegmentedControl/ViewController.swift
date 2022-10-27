@@ -20,7 +20,13 @@ class ViewController: UIViewController {
         
         view.addSubview(segmented)
         
+        segmented.translatesAutoresizingMaskIntoConstraints = false
         
+        NSLayoutConstraint.activate([
+            segmented.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            segmented.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            segmented.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16)
+        ])
         
     }
 
