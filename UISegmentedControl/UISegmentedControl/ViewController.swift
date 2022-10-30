@@ -18,6 +18,13 @@ class ViewController: UIViewController {
         segmented.insertSegment(withTitle: "two", at: 2, animated: true)
         segmented.insertSegment(withTitle: "three", at: 0, animated: true)
         
+        segmented.selectedSegmentIndex = 1
+        segmented.selectedSegmentTintColor = .yellow
+        
+        segmented.setWidth(200, forSegmentAt: 1)
+        
+        segmented.addTarget(self, action: #selector(getSegment), for: .valueChanged)
+        
         view.addSubview(segmented)
         
         segmented.translatesAutoresizingMaskIntoConstraints = false
@@ -28,6 +35,10 @@ class ViewController: UIViewController {
             segmented.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16)
         ])
         
+    }
+    
+    @objc func getSegment(sender: UISegmentedControl ){
+        print(sender.titleForSegment(at: sender.selectedSegmentIndex)!)
     }
 
 
