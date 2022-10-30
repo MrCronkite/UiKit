@@ -17,6 +17,11 @@ class ViewController: UIViewController {
         view.addSubview(switchView)
         switchView.setOn(true, animated: true)
         
+        switchView.tintColor = .red
+        switchView.onTintColor = .yellow
+        switchView.thumbTintColor = .green
+        
+        
         
         switchView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -27,9 +32,13 @@ class ViewController: UIViewController {
             switchView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
         
+        switchView.addTarget(self, action: #selector(setAction), for: .valueChanged)
         
     }
 
+    @objc func setAction(sender: UISwitch){
+        print(sender.isOn ? 1 : 0)
+    }
 
 }
 
