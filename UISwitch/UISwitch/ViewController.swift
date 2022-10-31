@@ -26,8 +26,6 @@ class ViewController: UIViewController {
         switchView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-           // switchView.heightAnchor.constraint(equalToConstant: 200),
-           // switchView.widthAnchor.constraint(equalToConstant: 200),
             switchView.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
             switchView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
