@@ -14,8 +14,21 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.addSubview(datePicker)
+        datePicker.frame = CGRect(x: 10, y: 250, width: 320, height: 216)
+        datePicker.datePickerMode = .time
+        datePicker.contentMode = .top
+        datePicker.preferredDatePickerStyle = .wheels
+        datePicker.minuteInterval = 10
+        
+        datePicker.layer.borderWidth = 5
+        
+        datePicker.addTarget(self, action: #selector(getData), for: .valueChanged)
     }
 
+    @objc func getData(sender: UIDatePicker){
+        print(sender.date)
+    }
 
 }
 
