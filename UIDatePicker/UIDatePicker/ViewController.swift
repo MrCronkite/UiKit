@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         datePicker.datePickerMode = .time
         datePicker.contentMode = .top
         datePicker.preferredDatePickerStyle = .wheels
-        datePicker.minuteInterval = 10
+        datePicker.minuteInterval =
         
         datePicker.layer.borderWidth = 5
         
