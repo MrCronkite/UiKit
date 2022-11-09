@@ -16,10 +16,10 @@ class ViewController: UIViewController {
         
         view.addSubview(datePicker)
         datePicker.frame = CGRect(x: 10, y: 250, width: 320, height: 216)
-        datePicker.datePickerMode = .time
+        datePicker.datePickerMode = .date
         datePicker.contentMode = .top
         datePicker.preferredDatePickerStyle = .wheels
-        datePicker.minuteInterval =
+        datePicker.minuteInterval = 10
         
         datePicker.layer.borderWidth = 5
         
@@ -28,6 +28,11 @@ class ViewController: UIViewController {
 
     @objc func getData(sender: UIDatePicker){
         print(sender.date)
+        
+        let formater = DateFormatter()
+        formater.dateFormat = "d MMMM yyyy"
+        formater.timeZone = .current
+        print(formater.string(from: sender.date))
     }
 
 }
