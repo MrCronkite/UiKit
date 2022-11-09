@@ -20,10 +20,13 @@ class ViewController: UIViewController {
         stepper.minimumValue = -30
         stepper.maximumValue = 30
         stepper.addTarget(self, action: #selector(setStepp), for: .valueChanged)
-        stepper.stepValue = 5
+        stepper.stepValue = 0.3
         
         view.addSubview(label)
         label.text = "Hello"
+        label.textAlignment = .center
+       // label.layer.borderColor = CGColor(gray: 1, alpha: 1)
+        label.layer.borderWidth = 3
         
         label.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -37,6 +40,7 @@ class ViewController: UIViewController {
 
     @objc func setStepp(sender: UIStepper){
         label.text = "\(sender.value)"
+        label.layer.borderWidth = sender.value
         print(sender.value)
     }
 
