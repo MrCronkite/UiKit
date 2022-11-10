@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     
     let textField: UITextField = {
        let textF = UITextField()
@@ -29,13 +29,26 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        textField.delegate = self
         view.addSubview(textField)
         
         button.addTarget(self, action: #selector(sendData), for: .touchUpInside)
         view.addSubview(button)
     }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        print("begin")
+    }
    
-
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        print("end")
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        print("\(string) , \(range)")
+        return true
+    }
     
     @objc func sendData(){
         print(textField.text ?? "nil")
