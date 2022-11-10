@@ -14,6 +14,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         textF.frame = CGRect(x: 120, y: 100, width: 200, height: 30)
         textF.borderStyle = .roundedRect
         textF.placeholder = "Password"
+        textF.textContentType = .creditCardNumber
         return textF
     }()
     
