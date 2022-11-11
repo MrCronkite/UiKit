@@ -17,13 +17,16 @@ class ViewController: UIViewController {
         textV.dataDetectorTypes = [.link, .phoneNumber]
         
         let shadow = NSShadow()
-        shadow.shadowColor = .green
+        shadow.shadowColor = UIColor.green
         shadow.shadowBlurRadius = 15
         
         textV.linkTextAttributes = [
-            NSAttributedString.Key.foregroundColor: .green,
+            NSAttributedString.Key.foregroundColor: UIColor.green,
             NSAttributedString.Key.shadow: shadow
         ]
+        
+        textV.textContainerInset = .init(top: 30, left: 30, bottom: 30, right: 30)
+        textV.allowsEditingTextAttributes = true
         
         return textV
     }()
