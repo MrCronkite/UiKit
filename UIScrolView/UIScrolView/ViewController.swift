@@ -7,11 +7,26 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIScrollViewDelegate {
+    
+    let image = UIImageView()
+    let scrol = UIScrollView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        scrol.frame = CGRect(x: 100, y: 300, width: 200, height: 200)
+        view.addSubview(scrol)
+        
+        scrol.layer.borderColor = UIColor.black.cgColor
+        scrol.layer.borderWidth = 1
+        
+        image.image = UIImage(systemName: "pencil.circle.fill")
+        scrol.contentSize = CGSize(width: 500, height: 500)
+        scrol.addSubview(image)
+        image.frame.size = scrol.contentSize
+        
+    
     }
 
 
