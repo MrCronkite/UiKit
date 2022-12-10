@@ -20,6 +20,8 @@
 		B23EED472944F9DC00F25C7B /* OrderStatus.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B23EED432944F9D800F25C7B /* OrderStatus.intentdefinition */; };
 		B23EED482944F9DC00F25C7B /* OrderStatus.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B23EED432944F9D800F25C7B /* OrderStatus.intentdefinition */; };
 		B23EED4B2944F9DC00F25C7B /* OrderStatusExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B23EED362944F9D700F25C7B /* OrderStatusExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B23EED522944FB5900F25C7B /* OrderAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23EED512944FB5900F25C7B /* OrderAttributes.swift */; };
+		B23EED532944FB9C00F25C7B /* OrderAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23EED512944FB5900F25C7B /* OrderAttributes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,7 @@
 		B23EED432944F9D800F25C7B /* OrderStatus.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = OrderStatus.intentdefinition; sourceTree = "<group>"; };
 		B23EED442944F9DC00F25C7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B23EED462944F9DC00F25C7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B23EED512944FB5900F25C7B /* OrderAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderAttributes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,7 @@
 		B23EED232944F94E00F25C7B /* LiveActivity */ = {
 			isa = PBXGroup;
 			children = (
+				B23EED502944FB3900F25C7B /* Model */,
 				B23EED242944F94E00F25C7B /* LiveActivityApp.swift */,
 				B23EED262944F94E00F25C7B /* ContentView.swift */,
 				B23EED282944F95000F25C7B /* Assets.xcassets */,
@@ -141,6 +145,14 @@
 				B23EED462944F9DC00F25C7B /* Info.plist */,
 			);
 			path = OrderStatus;
+			sourceTree = "<group>";
+		};
+		B23EED502944FB3900F25C7B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B23EED512944FB5900F25C7B /* OrderAttributes.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,6 +259,7 @@
 				B23EED482944F9DC00F25C7B /* OrderStatus.intentdefinition in Sources */,
 				B23EED272944F94E00F25C7B /* ContentView.swift in Sources */,
 				B23EED252944F94E00F25C7B /* LiveActivityApp.swift in Sources */,
+				B23EED522944FB5900F25C7B /* OrderAttributes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +269,7 @@
 			files = (
 				B23EED422944F9D700F25C7B /* OrderStatus.swift in Sources */,
 				B23EED472944F9DC00F25C7B /* OrderStatus.intentdefinition in Sources */,
+				B23EED532944FB9C00F25C7B /* OrderAttributes.swift in Sources */,
 				B23EED3E2944F9D700F25C7B /* OrderStatusBundle.swift in Sources */,
 				B23EED402944F9D700F25C7B /* OrderStatusLiveActivity.swift in Sources */,
 			);
