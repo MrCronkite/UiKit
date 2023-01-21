@@ -17,6 +17,8 @@ class ViewController: UIViewController {
         collectionView.dataSource = self
         let collectionCellNib = UINib(nibName: "ButtonCell", bundle: nil)
         collectionView.register(collectionCellNib, forCellWithReuseIdentifier: "ButtonCell")
+        let commonCellNib = UINib(nibName: "CommonCell", bundle: nil)
+        collectionView.register(commonCellNib, forCellWithReuseIdentifier: "CommonCell")
     }
     
 }
@@ -27,8 +29,17 @@ extension ViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ButtonCell", for: indexPath) as! ButtonCell
-        return cell 
+        switch indexPath.item {
+        case 0:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ButtonCell", for: indexPath) as! ButtonCell
+            cell.configure()
+            return cell
+            
+        default:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CommonCell", for: indexPath) as! CommonCell
+            cell.configure(icon: UIImage(systemName: "figure.cooldown"), text: "Sell")
+            return cell
+        }
     }
     
     

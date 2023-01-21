@@ -17,4 +17,11 @@ class ButtonCell: UICollectionViewCell {
         topButton.setImage(UIImage(systemName: "doc.badge.gearshape.fill"), for: .normal)
         bottomButton.setImage(UIImage(systemName: "doc.badge.gearshape.fill"), for: .normal)
     }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        topButton.layer.cornerRadius = 10
+        bottomButton.layer.cornerRadius = 10
+    }
 }
+

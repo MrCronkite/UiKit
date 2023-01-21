@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Cyl-R9-weS" customClass="CommonCell" customModule="ColectionView" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="155" height="155"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4Hi-h0-KlA">
+                <rect key="frame" x="0.0" y="0.0" width="155" height="155"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ueB-7X-gDp">
+                        <rect key="frame" x="10" y="10" width="35" height="35"/>
+                        <color key="tintColor" white="0.70317918430000004" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="35" id="JIB-km-GQU"/>
+                            <constraint firstAttribute="height" constant="35" id="d9L-dS-lgI"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZUe-k7-y20">
+                        <rect key="frame" x="110" y="10" width="35" height="35"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="35" id="V3j-B1-bYZ"/>
+                            <constraint firstAttribute="height" constant="35" id="xm4-le-dnl"/>
+                        </constraints>
+                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="xmark" catalog="system"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U8w-Hj-VxW">
+                        <rect key="frame" x="10" y="87" width="135" height="60"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="UXo-5A-5ut"/>
+                            <constraint firstAttribute="width" constant="135" id="XSh-xu-pmU"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="0.0" green="0.36351244379999997" blue="0.3462739152" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="U8w-Hj-VxW" secondAttribute="bottom" constant="8" id="NTC-fM-B6M"/>
+                    <constraint firstItem="ueB-7X-gDp" firstAttribute="top" secondItem="4Hi-h0-KlA" secondAttribute="top" constant="10" id="Vgd-GC-M2A"/>
+                    <constraint firstItem="ZUe-k7-y20" firstAttribute="top" secondItem="4Hi-h0-KlA" secondAttribute="top" constant="10" id="gnl-Sk-MVz"/>
+                    <constraint firstAttribute="trailing" secondItem="U8w-Hj-VxW" secondAttribute="trailing" constant="10" id="kxN-BQ-4hv"/>
+                    <constraint firstItem="U8w-Hj-VxW" firstAttribute="leading" secondItem="4Hi-h0-KlA" secondAttribute="leading" constant="10" id="sxc-zM-tbg"/>
+                    <constraint firstItem="ueB-7X-gDp" firstAttribute="leading" secondItem="4Hi-h0-KlA" secondAttribute="leading" constant="10" id="uIC-aZ-WdE"/>
+                    <constraint firstAttribute="trailing" secondItem="ZUe-k7-y20" secondAttribute="trailing" constant="10" id="wq9-7S-XBN"/>
+                    <constraint firstItem="U8w-Hj-VxW" firstAttribute="top" secondItem="ueB-7X-gDp" secondAttribute="bottom" constant="42" id="xDg-tN-xc5"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <connections>
+                <outlet property="closeButton" destination="ZUe-k7-y20" id="pjU-hw-rON"/>
+                <outlet property="iconImage" destination="ueB-7X-gDp" id="XUC-c9-OQu"/>
+                <outlet property="textLabel" destination="U8w-Hj-VxW" id="Fzy-uE-8TP"/>
+            </connections>
+            <point key="canvasLocation" x="43.511450381679388" y="-102.46478873239437"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+    </resources>
+</document>
