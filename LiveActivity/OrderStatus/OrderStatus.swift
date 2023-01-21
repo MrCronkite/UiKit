@@ -12,6 +12,12 @@ import Intents
 @main
 struct OrderStatus: Widget {
     var body: some WidgetConfiguration {
-        ActivityConfiguration(for: <#T##_.Type#>, content: <#T##(ActivityViewContext<_>) -> View#>, dynamicIsland: <#T##(ActivityViewContext<_>) -> DynamicIsland#>
+        ActivityConfiguration(for: OrderAttributes.self) { context in
+            
+            ZStack{
+                RoundedRectangle(cornerRadius: 15, style: .continuous)
+                    .fill(Color("Green").gradient)
+            }
+        } dynamicIsland: <#(ActivityViewContext<OrderAttributes>) -> DynamicIsland#>
     }
 }
