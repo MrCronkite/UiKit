@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B259814C29B8636600A18A9A /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B259814B29B8636600A18A9A /* UIColor.swift */; };
 		B264647529B7BB6E00AA7F5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B264647429B7BB6E00AA7F5D /* AppDelegate.swift */; };
 		B264647729B7BB6E00AA7F5D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B264647629B7BB6E00AA7F5D /* SceneDelegate.swift */; };
 		B264647929B7BB6E00AA7F5D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B264647829B7BB6E00AA7F5D /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B259814B29B8636600A18A9A /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		B264647129B7BB6E00AA7F5D /* workoutApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = workoutApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B264647429B7BB6E00AA7F5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B264647629B7BB6E00AA7F5D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +39,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B259814929B8633500A18A9A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B259814A29B8634400A18A9A /* Extensions */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		B259814A29B8634400A18A9A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B259814B29B8636600A18A9A /* UIColor.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		B264646829B7BB6E00AA7F5D = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +74,7 @@
 		B264647329B7BB6E00AA7F5D /* workoutApp */ = {
 			isa = PBXGroup;
 			children = (
+				B259814929B8633500A18A9A /* Helpers */,
 				B264648829B7BD4600AA7F5D /* Application */,
 				B264647829B7BB6E00AA7F5D /* ViewController.swift */,
 				B264648A29B7C6F700AA7F5D /* TabBarController.swift */,
@@ -157,6 +176,7 @@
 				B264648B29B7C6F700AA7F5D /* TabBarController.swift in Sources */,
 				B264647529B7BB6E00AA7F5D /* AppDelegate.swift in Sources */,
 				B264647729B7BB6E00AA7F5D /* SceneDelegate.swift in Sources */,
+				B259814C29B8636600A18A9A /* UIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
