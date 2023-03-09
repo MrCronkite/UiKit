@@ -13,6 +13,7 @@ enum Resouces {
         static var inactive = UIColor(hex: "#929DA%")
         
         static var separator = UIColor(hex: "#EBECEF")
+        static var titleGray = UIColor(hex: "#545C77")
     }
     
     
