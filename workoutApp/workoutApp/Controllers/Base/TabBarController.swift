@@ -32,19 +32,19 @@ final class TabBarController: UITabBarController {
         tabBar.barTintColor = Resouces.Colors.inactive
         tabBar.backgroundColor = .white
         
-        tabBar.layer.borderWidth = 1
-        tabBar.layer.borderColor = Resouces.Colors.separator?.cgColor
+        tabBar.layer.borderWidth = 0.2
+        tabBar.layer.borderColor = Resouces.Colors.separator.cgColor
         tabBar.layer.masksToBounds = true
         
-        let overviewController = UIViewController()
-        let sessionController = UIViewController()
-        let progressController = UIViewController()
-        let settingsController = UIViewController()
+        let overviewController = OverviewController()
+        let sessionController = SessionController()
+        let progressController = ProgressController()
+        let settingsController = SettingsController()
         
-        let overviewNavigation = UINavigationController(rootViewController: overviewController)
-        let sessionNavigation = UINavigationController(rootViewController: sessionController)
-        let progressNavigation = UINavigationController(rootViewController: progressController)
-        let settingsNavigation = UINavigationController(rootViewController: settingsController)
+        let overviewNavigation = NavBarControoler(rootViewController: overviewController)
+        let sessionNavigation = NavBarControoler(rootViewController: sessionController)
+        let progressNavigation = NavBarControoler(rootViewController: progressController)
+        let settingsNavigation = NavBarControoler(rootViewController: settingsController)
         
         settingsNavigation.tabBarItem = UITabBarItem(title: Resouces.Strings.TabBar.settings,
                                                      image: Resouces.Images.TabBar.settings,

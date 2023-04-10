@@ -7,11 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B230503729E4749F00D1CA4A /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B230503629E4749F00D1CA4A /* BaseController.swift */; };
+		B230503929E4771F00D1CA4A /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B230503829E4771F00D1CA4A /* UIView.swift */; };
+		B230504029E47AB400D1CA4A /* SessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B230503F29E47AB400D1CA4A /* SessionController.swift */; };
+		B230504229E47AC500D1CA4A /* ProgressController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B230504129E47AC500D1CA4A /* ProgressController.swift */; };
+		B230504429E47ADD00D1CA4A /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B230504329E47ADD00D1CA4A /* SettingsController.swift */; };
 		B259814C29B8636600A18A9A /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B259814B29B8636600A18A9A /* UIColor.swift */; };
 		B259814E29B8643900A18A9A /* Resouces.swift in Sources */ = {isa = PBXBuildFile; fileRef = B259814D29B8643900A18A9A /* Resouces.swift */; };
 		B264647529B7BB6E00AA7F5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B264647429B7BB6E00AA7F5D /* AppDelegate.swift */; };
 		B264647729B7BB6E00AA7F5D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B264647629B7BB6E00AA7F5D /* SceneDelegate.swift */; };
-		B264647929B7BB6E00AA7F5D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B264647829B7BB6E00AA7F5D /* ViewController.swift */; };
+		B264647929B7BB6E00AA7F5D /* OverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B264647829B7BB6E00AA7F5D /* OverviewController.swift */; };
 		B264647E29B7BB7000AA7F5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B264647D29B7BB7000AA7F5D /* Assets.xcassets */; };
 		B264648129B7BB7000AA7F5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B264647F29B7BB7000AA7F5D /* LaunchScreen.storyboard */; };
 		B264648B29B7C6F700AA7F5D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B264648A29B7C6F700AA7F5D /* TabBarController.swift */; };
@@ -19,12 +24,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B230503629E4749F00D1CA4A /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
+		B230503829E4771F00D1CA4A /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		B230503F29E47AB400D1CA4A /* SessionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionController.swift; sourceTree = "<group>"; };
+		B230504129E47AC500D1CA4A /* ProgressController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressController.swift; sourceTree = "<group>"; };
+		B230504329E47ADD00D1CA4A /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		B259814B29B8636600A18A9A /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		B259814D29B8643900A18A9A /* Resouces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resouces.swift; sourceTree = "<group>"; };
 		B264647129B7BB6E00AA7F5D /* workoutApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = workoutApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B264647429B7BB6E00AA7F5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B264647629B7BB6E00AA7F5D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B264647829B7BB6E00AA7F5D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B264647829B7BB6E00AA7F5D /* OverviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewController.swift; sourceTree = "<group>"; };
 		B264647D29B7BB7000AA7F5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B264648029B7BB7000AA7F5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B264648229B7BB7000AA7F5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -43,6 +53,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B230503529E473FC00D1CA4A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B230503E29E47A9700D1CA4A /* Settings */,
+				B230503D29E47A8E00D1CA4A /* Progress */,
+				B230503C29E47A8300D1CA4A /* Session */,
+				B230503B29E47A7700D1CA4A /* Overview */,
+				B230503A29E47A6B00D1CA4A /* Base */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B230503A29E47A6B00D1CA4A /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				B264648A29B7C6F700AA7F5D /* TabBarController.swift */,
+				B2E1B9FE29BA3FA600CBFEB6 /* NavBarController.swift */,
+				B230503629E4749F00D1CA4A /* BaseController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		B230503B29E47A7700D1CA4A /* Overview */ = {
+			isa = PBXGroup;
+			children = (
+				B264647829B7BB6E00AA7F5D /* OverviewController.swift */,
+			);
+			path = Overview;
+			sourceTree = "<group>";
+		};
+		B230503C29E47A8300D1CA4A /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				B230503F29E47AB400D1CA4A /* SessionController.swift */,
+			);
+			path = Session;
+			sourceTree = "<group>";
+		};
+		B230503D29E47A8E00D1CA4A /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+				B230504129E47AC500D1CA4A /* ProgressController.swift */,
+			);
+			path = Progress;
+			sourceTree = "<group>";
+		};
+		B230503E29E47A9700D1CA4A /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				B230504329E47ADD00D1CA4A /* SettingsController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		B259814929B8633500A18A9A /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				B259814B29B8636600A18A9A /* UIColor.swift */,
+				B230503829E4771F00D1CA4A /* UIView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -81,9 +146,7 @@
 			children = (
 				B259814929B8633500A18A9A /* Helpers */,
 				B264648829B7BD4600AA7F5D /* Application */,
-				B264647829B7BB6E00AA7F5D /* ViewController.swift */,
-				B264648A29B7C6F700AA7F5D /* TabBarController.swift */,
-				B2E1B9FE29BA3FA600CBFEB6 /* NavBarController.swift */,
+				B230503529E473FC00D1CA4A /* Controllers */,
 				B264648929B7BD7100AA7F5D /* SupportingFiles */,
 			);
 			path = workoutApp;
@@ -178,12 +241,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B264647929B7BB6E00AA7F5D /* ViewController.swift in Sources */,
+				B264647929B7BB6E00AA7F5D /* OverviewController.swift in Sources */,
 				B264648B29B7C6F700AA7F5D /* TabBarController.swift in Sources */,
+				B230504429E47ADD00D1CA4A /* SettingsController.swift in Sources */,
 				B264647529B7BB6E00AA7F5D /* AppDelegate.swift in Sources */,
 				B2E1B9FF29BA3FA600CBFEB6 /* NavBarController.swift in Sources */,
+				B230504029E47AB400D1CA4A /* SessionController.swift in Sources */,
+				B230504229E47AC500D1CA4A /* ProgressController.swift in Sources */,
 				B264647729B7BB6E00AA7F5D /* SceneDelegate.swift in Sources */,
 				B259814E29B8643900A18A9A /* Resouces.swift in Sources */,
+				B230503729E4749F00D1CA4A /* BaseController.swift in Sources */,
+				B230503929E4771F00D1CA4A /* UIView.swift in Sources */,
 				B259814C29B8636600A18A9A /* UIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

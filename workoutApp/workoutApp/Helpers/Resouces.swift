@@ -14,6 +14,7 @@ enum Resouces {
         
         static var separator = UIColor(hex: "#EBECEF")
         static var titleGray = UIColor(hex: "#545C77")
+        static var backgraund = UIColor(hex: "#F8F9F9")
     }
     
     
@@ -32,6 +33,12 @@ enum Resouces {
             static var session = UIImage(named: "session_tab")
             static var progress = UIImage(named: "progress_tab")
             static var settings = UIImage(named: "settings_tab")
+        }
+    }
+    
+    enum Fonts {
+        static func helveticaRegular(witf size: CGFloat) -> UIFont {
+            UIFont(name: "Helvetica", size: size) ?? UIFont()
         }
     }
 }
