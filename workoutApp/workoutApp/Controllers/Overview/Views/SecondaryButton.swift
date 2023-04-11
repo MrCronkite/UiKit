@@ -23,6 +23,10 @@ final class SecondaryButton: UIButton {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    func setTitle(_ title: String) {
+        lable.text = title
+    }
 }
 
 private extension SecondaryButton {
@@ -45,6 +49,10 @@ private extension SecondaryButton {
     }
     
     func configure() {
+        backgroundColor = Resouces.Colors.secondary
+        layer.cornerRadius = 14
+        makeAnimationButton(self)
+        
         lable.translatesAutoresizingMaskIntoConstraints = false
         lable.textColor = Resouces.Colors.active
         lable.font = Resouces.Fonts.helveticaRegular(witf: 15)
