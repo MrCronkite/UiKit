@@ -15,6 +15,7 @@ enum Resouces {
         static var separator = UIColor(hex: "#EBECEF")
         static var titleGray = UIColor(hex: "#545C77")
         static var backgraund = UIColor(hex: "#F8F9F9")
+        static var secondary = UIColor(hex: "#F0F3FF")
     }
     
     
@@ -25,6 +26,17 @@ enum Resouces {
             static var progress = "Progress"
             static var settings = "Settings"
         }
+        
+        enum NavBar {
+            static var overview = "Today"
+            static var session = "High Intensity Cardio"
+            static var progress = "Workout Progress"
+            static var settings = "Settings"
+        }
+        
+        enum Overview {
+            static var allWorkoutsButton = "All Workpots"
+        }
     }
     
     enum Images {
@@ -33,6 +45,10 @@ enum Resouces {
             static var session = UIImage(named: "session_tab")
             static var progress = UIImage(named: "progress_tab")
             static var settings = UIImage(named: "settings_tab")
+        }
+        
+        enum Common {
+            static var downArrow = UIImage(named: "down_arrow")
         }
     }
     

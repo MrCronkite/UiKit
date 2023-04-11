@@ -12,7 +12,7 @@ class SessionController: BaseController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "High Intensity Cardio"
+        title = Resouces.Strings.NavBar.session
         navigationController?.tabBarItem.title = Resouces.Strings.TabBar.session
         
         addNavBarButton(at: .left, with: "Pause")

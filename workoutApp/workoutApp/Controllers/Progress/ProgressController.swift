@@ -11,7 +11,7 @@ class ProgressController: BaseController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Workout Progress"
+        title = Resouces.Strings.NavBar.progress
         navigationController?.tabBarItem.title = Resouces.Strings.TabBar.progress
         
         addNavBarButton(at: .left, with: "Export")

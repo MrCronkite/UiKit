@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B2167BFB29E5DDD100D9CA0F /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2167BFA29E5DDD100D9CA0F /* SecondaryButton.swift */; };
 		B230503729E4749F00D1CA4A /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B230503629E4749F00D1CA4A /* BaseController.swift */; };
 		B230503929E4771F00D1CA4A /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B230503829E4771F00D1CA4A /* UIView.swift */; };
 		B230504029E47AB400D1CA4A /* SessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B230503F29E47AB400D1CA4A /* SessionController.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B2167BFA29E5DDD100D9CA0F /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
 		B230503629E4749F00D1CA4A /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
 		B230503829E4771F00D1CA4A /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		B230503F29E47AB400D1CA4A /* SessionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionController.swift; sourceTree = "<group>"; };
@@ -53,6 +55,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B2167BF929E5DD6C00D9CA0F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B2167BFA29E5DDD100D9CA0F /* SecondaryButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		B230503529E473FC00D1CA4A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +88,7 @@
 		B230503B29E47A7700D1CA4A /* Overview */ = {
 			isa = PBXGroup;
 			children = (
+				B2167BF929E5DD6C00D9CA0F /* Views */,
 				B264647829B7BB6E00AA7F5D /* OverviewController.swift */,
 			);
 			path = Overview;
@@ -247,6 +258,7 @@
 				B264647529B7BB6E00AA7F5D /* AppDelegate.swift in Sources */,
 				B2E1B9FF29BA3FA600CBFEB6 /* NavBarController.swift in Sources */,
 				B230504029E47AB400D1CA4A /* SessionController.swift in Sources */,
+				B2167BFB29E5DDD100D9CA0F /* SecondaryButton.swift in Sources */,
 				B230504229E47AC500D1CA4A /* ProgressController.swift in Sources */,
 				B264647729B7BB6E00AA7F5D /* SceneDelegate.swift in Sources */,
 				B259814E29B8643900A18A9A /* Resouces.swift in Sources */,
