@@ -63,10 +63,10 @@ final class TabBarController: UITabBarController {
                                                      tag: Tabs.progress.rawValue)
         
         setViewControllers([
-            settingsNavigation,
             overviewNavigation,
             sessionNavigation,
-            progressNavigation
+            progressNavigation,
+            settingsNavigation
         ], animated: false)
     }
 }
