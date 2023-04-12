@@ -13,7 +13,7 @@ class BaseView: UIView {
         super.init(frame: frame)
         
         addViews()
-        configure()
+        configureViews()
         layoutView()
     }
     
@@ -25,6 +25,6 @@ class BaseView: UIView {
 @objc extension BaseView {
     
     func layoutView() {}
-    func configure() {}
+    func configureViews() {}
     func addViews() {}
 }
