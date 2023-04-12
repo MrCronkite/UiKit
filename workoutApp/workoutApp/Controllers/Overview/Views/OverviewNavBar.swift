@@ -13,6 +13,12 @@ final class OverviewNavBar: BaseView {
     private let addButton = UIButton()
     private let allWorkoutsButton = SecondaryButton()
     
+    private let weekView: UIView = {
+       let view = UIView()
+        view.backgroundColor = .blue.withAlphaComponent(0.2)
+        return view
+    }()
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         addBottomSeparator(with: Resouces.Colors.separator, heigh: 1)
@@ -31,9 +37,10 @@ extension OverviewNavBar {
     override func addViews() {
         super.addViews()
         
-        addSubview(allWorkoutsButton)
-        addSubview(titleLable)
-        addSubview(addButton)
+        addView(allWorkoutsButton)
+        addView(titleLable)
+        addView(addButton)
+        addView(weekView)
     }
     
     override func layoutView() {
@@ -52,7 +59,13 @@ extension OverviewNavBar {
             
             titleLable.centerYAnchor.constraint(equalTo: allWorkoutsButton.centerYAnchor),
             titleLable.trailingAnchor.constraint(equalTo: allWorkoutsButton.leadingAnchor),
-            titleLable.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15)
+            titleLable.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),
+            
+            weekView.topAnchor.constraint(equalTo: addButton.bottomAnchor, constant: 15),
+            weekView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),
+            weekView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15),
+            weekView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -15),
+            weekView.heightAnchor.constraint(equalToConstant: 47)
         ])
     }
     
@@ -60,15 +73,12 @@ extension OverviewNavBar {
         super.configure()
         backgroundColor = .white
         
-        titleLable.translatesAutoresizingMaskIntoConstraints = false
         titleLable.text = Resouces.Strings.NavBar.overview
         titleLable.textColor = Resouces.Colors.titleGray
         titleLable.font = Resouces.Fonts.helveticaRegular(witf: 22)
         
-        allWorkoutsButton.translatesAutoresizingMaskIntoConstraints = false
         allWorkoutsButton.setTitle(Resouces.Strings.Overview.allWorkoutsButton)
         
-        addButton.translatesAutoresizingMaskIntoConstraints = false
         addButton.setImage(Resouces.Images.Common.add, for: .normal)
         
     }

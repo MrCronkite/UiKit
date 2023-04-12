@@ -21,7 +21,7 @@ class OverviewController: BaseController {
 extension OverviewController {
     override func addViews() {
         super.addViews()
-        view.addSubview(navBar)
+        view.addView(navBar)
     }
     
     override func layoutViews() {
@@ -30,16 +30,13 @@ extension OverviewController {
         NSLayoutConstraint.activate([
             navBar.topAnchor.constraint(equalTo: view.topAnchor),
             navBar.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            navBar.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            navBar.heightAnchor.constraint(equalToConstant: 113)
+            navBar.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
     }
     
     override func configure() {
         super.configure()
         navigationController?.navigationBar.isHidden = true
-        navBar.translatesAutoresizingMaskIntoConstraints = false
-        
     }
 }
 
