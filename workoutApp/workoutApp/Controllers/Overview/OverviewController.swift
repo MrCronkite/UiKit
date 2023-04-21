@@ -14,7 +14,7 @@ class OverviewController: BaseController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.tabBarItem.title = Resouces.Strings.TabBar.overview
+        navigationController?.tabBarItem.title = R.Strings.TabBar.title(for: .overview)
     }
 }
 

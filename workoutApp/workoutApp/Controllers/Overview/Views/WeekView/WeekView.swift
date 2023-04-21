@@ -16,14 +16,14 @@ final class WeekView: BaseView {
 }
 
 extension WeekView {
-    override func addViews() {
-        super.addViews()
+    override func setupViews() {
+        super.setupViews()
         
         addView(stackView)
     }
     
-    override func layoutView() {
-        super.layoutView()
+    override func constraintViews() {
+        super.constraintViews()
         NSLayoutConstraint.activate([
             stackView.topAnchor.constraint(equalTo: topAnchor),
             stackView.leadingAnchor.constraint(equalTo: leadingAnchor),

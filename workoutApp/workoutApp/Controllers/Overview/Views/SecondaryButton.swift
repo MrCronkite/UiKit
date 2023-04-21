@@ -49,16 +49,16 @@ private extension SecondaryButton {
     }
     
     func configure() {
-        backgroundColor = Resouces.Colors.secondary
+        backgroundColor = R.Colors.secondary
         layer.cornerRadius = 14
         makeAnimationButton(self)
         
-        lable.textColor = Resouces.Colors.active
-        lable.font = Resouces.Fonts.helveticaRegular(witf: 15)
+        lable.textColor = R.Colors.active
+        lable.font = R.Fonts.helveticaRegular(witf: 15)
         lable.textAlignment = .center
         
-        iconView.image = Resouces.Images.Common.downArrow?.withRenderingMode(.alwaysTemplate)
-        iconView.tintColor = Resouces.Colors.active
+        iconView.image = R.Images.Common.downArrow?.withRenderingMode(.alwaysTemplate)
+        iconView.tintColor = R.Colors.active
 
     }
 }
