@@ -10,8 +10,8 @@
 		B204EF6729E7363B00BD0E15 /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B204EF6629E7363B00BD0E15 /* WeekView.swift */; };
 		B204EF6929E7385300BD0E15 /* WeekDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B204EF6829E7385300BD0E15 /* WeekDayView.swift */; };
 		B204EF6B29E73CEA00BD0E15 /* Date + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B204EF6A29E73CEA00BD0E15 /* Date + ext.swift */; };
-		B2167BFB29E5DDD100D9CA0F /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2167BFA29E5DDD100D9CA0F /* SecondaryButton.swift */; };
-		B21CACD429F2EABF00A49949 /* BaseInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21CACD329F2EABF00A49949 /* BaseInfoView.swift */; };
+		B2167BFB29E5DDD100D9CA0F /* WAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2167BFA29E5DDD100D9CA0F /* WAButton.swift */; };
+		B21CACD429F2EABF00A49949 /* WABaseInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21CACD329F2EABF00A49949 /* WABaseInfoView.swift */; };
 		B230503729E4749F00D1CA4A /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B230503629E4749F00D1CA4A /* BaseController.swift */; };
 		B230503929E4771F00D1CA4A /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B230503829E4771F00D1CA4A /* UIView.swift */; };
 		B230504029E47AB400D1CA4A /* SessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B230503F29E47AB400D1CA4A /* SessionController.swift */; };
@@ -34,8 +34,8 @@
 		B204EF6629E7363B00BD0E15 /* WeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekView.swift; sourceTree = "<group>"; };
 		B204EF6829E7385300BD0E15 /* WeekDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDayView.swift; sourceTree = "<group>"; };
 		B204EF6A29E73CEA00BD0E15 /* Date + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + ext.swift"; sourceTree = "<group>"; };
-		B2167BFA29E5DDD100D9CA0F /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
-		B21CACD329F2EABF00A49949 /* BaseInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInfoView.swift; sourceTree = "<group>"; };
+		B2167BFA29E5DDD100D9CA0F /* WAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WAButton.swift; sourceTree = "<group>"; };
+		B21CACD329F2EABF00A49949 /* WABaseInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WABaseInfoView.swift; sourceTree = "<group>"; };
 		B230503629E4749F00D1CA4A /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
 		B230503829E4771F00D1CA4A /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		B230503F29E47AB400D1CA4A /* SessionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionController.swift; sourceTree = "<group>"; };
@@ -80,7 +80,6 @@
 			isa = PBXGroup;
 			children = (
 				B204EF6529E7362000BD0E15 /* WeekView */,
-				B2167BFA29E5DDD100D9CA0F /* SecondaryButton.swift */,
 				B2ACA9BE29E6829E001C9993 /* OverviewNavBar.swift */,
 			);
 			path = Views;
@@ -90,7 +89,8 @@
 			isa = PBXGroup;
 			children = (
 				B2ACA9C029E68340001C9993 /* BaseView.swift */,
-				B21CACD329F2EABF00A49949 /* BaseInfoView.swift */,
+				B2167BFA29E5DDD100D9CA0F /* WAButton.swift */,
+				B21CACD329F2EABF00A49949 /* WABaseInfoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -294,8 +294,8 @@
 				B264647529B7BB6E00AA7F5D /* AppDelegate.swift in Sources */,
 				B2E1B9FF29BA3FA600CBFEB6 /* NavBarController.swift in Sources */,
 				B230504029E47AB400D1CA4A /* SessionController.swift in Sources */,
-				B2167BFB29E5DDD100D9CA0F /* SecondaryButton.swift in Sources */,
-				B21CACD429F2EABF00A49949 /* BaseInfoView.swift in Sources */,
+				B2167BFB29E5DDD100D9CA0F /* WAButton.swift in Sources */,
+				B21CACD429F2EABF00A49949 /* WABaseInfoView.swift in Sources */,
 				B230504229E47AC500D1CA4A /* ProgressController.swift in Sources */,
 				B264647729B7BB6E00AA7F5D /* SceneDelegate.swift in Sources */,
 				B259814E29B8643900A18A9A /* R.swift in Sources */,

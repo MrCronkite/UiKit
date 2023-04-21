@@ -39,7 +39,7 @@ enum R {
         }
         
         enum Overview {
-            static var allWorkoutsButton = "All Workpots"
+            static var allWorkoutsButton = "All Workouts"
         }
         
         enum Session {
