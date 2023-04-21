@@ -7,13 +7,19 @@
 
 import UIKit
 
-final class BaseInfoView: BaseView {
+class BaseInfoView: BaseView {
     
     private let titleLabel: UILabel = {
         let lable = UILabel()
         lable.font = R.Fonts.helveticaRegular(witf: 13)
         lable.textColor = R.Colors.inactive
         return lable
+    }()
+    
+    private let button: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = .green
+        return button
     }()
     
     private let contentView: UIView = {
@@ -25,15 +31,21 @@ final class BaseInfoView: BaseView {
         return view
     }()
     
-    init(with title: String? = nil, aligment: NSTextAlignment = .left) {
+    init(with title: String? = nil, buttonTitle: String? = nil) {
         titleLabel.text = title?.uppercased()
-        titleLabel.textAlignment = aligment
+        titleLabel.textAlignment = buttonTitle == nil ? .center : .left
+        button.setTitle(buttonTitle, for: .normal)
+        button.isHidden = buttonTitle == nil ? true : false
         
         super.init(frame: .zero)
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(frame: .zero)
+    }
+    
+    func addButtonTarget(target: Any?, action: Selector) {
+        button.addTarget(action, action: action, for: .touchUpInside)
     }
 }
 
@@ -48,6 +60,11 @@ extension BaseInfoView {
             titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
             titleLabel.topAnchor.constraint(equalTo: topAnchor),
             titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
+            
+            button.trailingAnchor.constraint(equalTo: trailingAnchor),
+            button.centerYAnchor.constraint(equalTo: titleLabel.centerYAnchor),
+            button.widthAnchor.constraint(equalToConstant: 130),
+            button.heightAnchor.constraint(equalToConstant: 30),
             
             contentView.topAnchor.constraint(equalTo: contentTopAnchor, constant: contentTopOffset),
             contentView.leadingAnchor.constraint(equalTo: leadingAnchor),
@@ -67,6 +84,7 @@ extension BaseInfoView {
 
         addView(titleLabel)
         addView(contentView)
+        addView(button)
         
     }
 }
