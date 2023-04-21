@@ -17,19 +17,19 @@ class BaseController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        addViews()
-        layoutViews()
-        configure()
+        setupViews()
+        constraintViews()
+        configureView()
     }
 }
 
 @objc extension BaseController {
     
-    func addViews() {}
+    func setupViews() {}
     
-    func layoutViews() {}
+    func constraintViews() {}
     
-    func configure() {
+    func configureView() {
         view.backgroundColor = R.Colors.backgraund
     }
     

@@ -35,8 +35,8 @@ final class TabBarController: UITabBarController {
         tabBar.layer.borderColor = R.Colors.separator.cgColor
         tabBar.layer.masksToBounds = true
         
-        let controllers: [NavBarControoler] = Tabs.allCases.map { tab in
-            let controller = NavBarControoler(rootViewController: getController(for: tab))
+        let controllers: [NavBarController] = Tabs.allCases.map { tab in
+            let controller = NavBarController(rootViewController: getController(for: tab))
             controller.tabBarItem = UITabBarItem(title: R.Strings.TabBar.title(for: tab),
                                                  image: R.Images.TabBar.icon(for: tab),
                                                  tag: tab.rawValue)
