@@ -9,13 +9,13 @@ import UIKit
 
 enum R {
     enum Colors {
-        static var active = UIColor(hex: "#437BFE")
-        static var inactive = UIColor(hex: "#929DA%")
+        static let active = UIColor(hex: "#437BFE")
+        static let inactive = UIColor(hex: "#929DA%")
         
-        static var separator = UIColor(hex: "#EBECEF")
-        static var titleGray = UIColor(hex: "#545C77")
-        static var backgraund = UIColor(hex: "#F8F9F9")
-        static var secondary = UIColor(hex: "#F0F3FF")
+        static let separator = UIColor(hex: "#EBECEF")
+        static let titleGray = UIColor(hex: "#545C77")
+        static let backgraund = UIColor(hex: "#F8F9F9")
+        static let secondary = UIColor(hex: "#F0F3FF")
     }
     
     
@@ -32,24 +32,24 @@ enum R {
         }
         
         enum NavBar {
-            static var overview = "Today"
-            static var session = "High Intensity Cardio"
-            static var progress = "Workout Progress"
-            static var settings = "Settings"
+            static let overview = "Today"
+            static let session = "High Intensity Cardio"
+            static let progress = "Workout Progress"
+            static let settings = "Settings"
         }
         
         enum Overview {
-            static var allWorkoutsButton = "All Workouts"
+            static let allWorkoutsButton = "All Workouts"
         }
         
         enum Session {
-            static var navBarLeft = "Pause"
-            static var navBarRight = "Finish"
+            static let navBarLeft = "Pause"
+            static let navBarRight = "Finish"
         }
         
         enum Progress {
-            static var navBarLeft = "Export"
-            static var navBarRight = "Details"
+            static let navBarLeft = "Export"
+            static let navBarRight = "Details"
         }
         
         enum Settings {}
@@ -68,8 +68,8 @@ enum R {
         }
         
         enum Common {
-            static var downArrow = UIImage(named: "down_arrow")
-            static var add = UIImage(named: "add_button")
+            static let downArrow = UIImage(named: "down_arrow")
+            static let add = UIImage(named: "add_button")
         }
     }
     
