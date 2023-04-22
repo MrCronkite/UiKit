@@ -17,6 +17,8 @@
 		B230504029E47AB400D1CA4A /* SessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B230503F29E47AB400D1CA4A /* SessionController.swift */; };
 		B230504229E47AC500D1CA4A /* ProgressController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B230504129E47AC500D1CA4A /* ProgressController.swift */; };
 		B230504429E47ADD00D1CA4A /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B230504329E47ADD00D1CA4A /* SettingsController.swift */; };
+		B242017229F4477F002EB259 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B242017129F4477F002EB259 /* TimerView.swift */; };
+		B242017529F448AD002EB259 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B242017429F448AD002EB259 /* ProgressView.swift */; };
 		B259814C29B8636600A18A9A /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B259814B29B8636600A18A9A /* UIColor.swift */; };
 		B259814E29B8643900A18A9A /* R.swift in Sources */ = {isa = PBXBuildFile; fileRef = B259814D29B8643900A18A9A /* R.swift */; };
 		B264647529B7BB6E00AA7F5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B264647429B7BB6E00AA7F5D /* AppDelegate.swift */; };
@@ -41,6 +43,8 @@
 		B230503F29E47AB400D1CA4A /* SessionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionController.swift; sourceTree = "<group>"; };
 		B230504129E47AC500D1CA4A /* ProgressController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressController.swift; sourceTree = "<group>"; };
 		B230504329E47ADD00D1CA4A /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		B242017129F4477F002EB259 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		B242017429F448AD002EB259 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		B259814B29B8636600A18A9A /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		B259814D29B8643900A18A9A /* R.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R.swift; sourceTree = "<group>"; };
 		B264647129B7BB6E00AA7F5D /* workoutApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = workoutApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +134,7 @@
 		B230503C29E47A8300D1CA4A /* Session */ = {
 			isa = PBXGroup;
 			children = (
+				B242017029F44765002EB259 /* Views */,
 				B230503F29E47AB400D1CA4A /* SessionController.swift */,
 			);
 			path = Session;
@@ -149,6 +154,23 @@
 				B230504329E47ADD00D1CA4A /* SettingsController.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		B242017029F44765002EB259 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B242017329F4489A002EB259 /* Timer */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B242017329F4489A002EB259 /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				B242017129F4477F002EB259 /* TimerView.swift */,
+				B242017429F448AD002EB259 /* ProgressView.swift */,
+			);
+			path = Timer;
 			sourceTree = "<group>";
 		};
 		B259814929B8633500A18A9A /* Helpers */ = {
@@ -296,6 +318,8 @@
 				B230504029E47AB400D1CA4A /* SessionController.swift in Sources */,
 				B2167BFB29E5DDD100D9CA0F /* WAButton.swift in Sources */,
 				B21CACD429F2EABF00A49949 /* WABaseInfoView.swift in Sources */,
+				B242017229F4477F002EB259 /* TimerView.swift in Sources */,
+				B242017529F448AD002EB259 /* ProgressView.swift in Sources */,
 				B230504229E47AC500D1CA4A /* ProgressController.swift in Sources */,
 				B264647729B7BB6E00AA7F5D /* SceneDelegate.swift in Sources */,
 				B259814E29B8643900A18A9A /* R.swift in Sources */,

@@ -22,7 +22,11 @@ final class WAButton: UIButton {
         return lable
     }()
     
-    private let iconView = UIImageView()
+    private let iconView: UIImageView = {
+        let view = UIImageView()
+        view.image = R.Images.Common.downArrow?.withRenderingMode(.alwaysOriginal)
+        return view
+    }()
     
     init(with type: WAButtonType) {
         super.init(frame: .zero)
@@ -76,16 +80,13 @@ private extension WAButton {
         case .primery:
             lable.textColor = R.Colors.inactive
             lable.font = R.Fonts.helveticaRegular(witf: 13)
-            iconView.tintColor = R.Colors.active
-            iconView.image = R.Images.Common.downArrow?.withRenderingMode(.alwaysOriginal)
-            iconView.image?.withTintColor(R.Colors.inactive)
+            iconView.tintColor = R.Colors.inactive
         case .secondary:
             backgroundColor = R.Colors.secondary
             layer.cornerRadius = 14
             lable.textColor = R.Colors.active
             lable.font = R.Fonts.helveticaRegular(witf: 15)
             lable.textColor = R.Colors.active
-            iconView.image = R.Images.Common.downArrow?.withRenderingMode(.alwaysTemplate)
         }
         
         makeAnimationButton(self)
