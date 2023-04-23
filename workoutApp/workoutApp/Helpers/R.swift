@@ -43,6 +43,7 @@ enum R {
         }
         
         enum Session {
+            static let navBarStart = "Start"
             static let navBarLeft = "Pause"
             static let navBarRight = "Finish"
         }
