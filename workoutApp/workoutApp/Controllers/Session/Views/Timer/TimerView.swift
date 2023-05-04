@@ -26,6 +26,7 @@ final class TimerView: WABaseInfoView {
     
     private let elapsedTimeValueLable: UILabel = {
         let lable = UILabel()
+        lable.text = "02:15"
         lable.font = R.Fonts.helveticaRegular(witf: 46)
         lable.textColor = R.Colors.titleGray
         lable.textAlignment = .center
@@ -43,6 +44,7 @@ final class TimerView: WABaseInfoView {
     
     private let remainingTimeValueLable: UILabel = {
         let lable = UILabel()
+        lable.text = "12:45"
         lable.font = R.Fonts.helveticaRegular(witf: 13)
         lable.textColor = R.Colors.titleGray
         lable.textAlignment = .center
@@ -119,12 +121,13 @@ extension TimerView {
         super.setupViews()
         
         addView(progressView)
+        addView(timeStackView)
         
         [
             elapsedTimeLable,
             elapsedTimeValueLable,
-            remainingTimeValueLable,
-            remainingTimeLable
+            remainingTimeLable,
+            remainingTimeValueLable
         ].forEach {
             timeStackView.addArrangedSubview($0)
         }
@@ -137,7 +140,11 @@ extension TimerView {
             progressView.topAnchor.constraint(equalTo: topAnchor, constant: 40),
             progressView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 40),
             progressView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -40),
-            progressView.heightAnchor.constraint(equalTo: progressView.widthAnchor)
+            progressView.heightAnchor.constraint(equalTo: progressView.widthAnchor),
+            progressView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 40),
+            
+            timeStackView.centerYAnchor.constraint(equalTo: progressView.centerYAnchor),
+            timeStackView.centerXAnchor.constraint(equalTo: progressView.centerXAnchor)
         ])
     }
     
