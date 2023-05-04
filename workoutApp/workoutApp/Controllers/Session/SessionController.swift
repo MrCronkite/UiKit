@@ -14,7 +14,11 @@ class SessionController: BaseController {
     
     override func navBarLeftButtonHandler() {
         if timerView.state == .isStopped {
-            timerView.startTimer()
+            timerView.startTimer {_ in 
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    self.navBarRightButtonHandler()
+                }
+            }
         } else {
             timerView.pauseTimer()
         }
@@ -62,5 +66,11 @@ extension SessionController {
         addNavBarButton(at: .right, with: R.Strings.Session.navBarRight)
         
         timerView.configure(with: timerDuration, progress: 0)
+        
+//        timerView.callBack = {
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+//                self.navBarRightButtonHandler()
+//            }
+//        }
     }
 }
