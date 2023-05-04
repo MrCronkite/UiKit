@@ -10,7 +10,7 @@ import UIKit
 class SessionController: BaseController {
     private let timerView = TimerView()
     
-    private let timerDuration = 3.0
+    private let timerDuration = 2615.0
     
     override func navBarLeftButtonHandler() {
         if timerView.state == .isStopped {
