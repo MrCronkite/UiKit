@@ -18,7 +18,6 @@ enum R {
         static let secondary = UIColor(hex: "#F0F3FF")
     }
     
-    
     enum Strings {
         enum TabBar {
             static func title(for tab: Tabs) -> String {
@@ -43,9 +42,12 @@ enum R {
         }
         
         enum Session {
-            static let navBarStart = "Start"
+            static let navBarStart = "Start   "
             static let navBarLeft = "Pause"
             static let navBarRight = "Finish"
+            
+            static let elapsedTime = "Elapsed Time"
+            static let remainingTime = "Remaining Time"
         }
         
         enum Progress {

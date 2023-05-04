@@ -14,5 +14,4 @@ class SettingsController: BaseController {
         title = R.Strings.NavBar.settings
         navigationController?.tabBarItem.title = R.Strings.TabBar.title(for: .session)
     }
-
 }

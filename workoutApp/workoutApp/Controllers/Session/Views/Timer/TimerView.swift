@@ -14,6 +14,49 @@ enum TimerState {
 }
 
 final class TimerView: WABaseInfoView {
+    
+    private let elapsedTimeLable: UILabel = {
+        let lable = UILabel()
+        lable.text = R.Strings.Session.elapsedTime
+        lable.font = R.Fonts.helveticaRegular(witf: 14)
+        lable.textColor = R.Colors.inactive
+        lable.textAlignment = .center
+        return lable
+    }()
+    
+    private let elapsedTimeValueLable: UILabel = {
+        let lable = UILabel()
+        lable.font = R.Fonts.helveticaRegular(witf: 46)
+        lable.textColor = R.Colors.titleGray
+        lable.textAlignment = .center
+        return lable
+    }()
+    
+    private let remainingTimeLable: UILabel = {
+        let lable = UILabel()
+        lable.text = R.Strings.Session.remainingTime
+        lable.font = R.Fonts.helveticaRegular(witf: 13)
+        lable.textColor = R.Colors.inactive
+        lable.textAlignment = .center
+        return lable
+    }()
+    
+    private let remainingTimeValueLable: UILabel = {
+        let lable = UILabel()
+        lable.font = R.Fonts.helveticaRegular(witf: 13)
+        lable.textColor = R.Colors.titleGray
+        lable.textAlignment = .center
+        return lable
+    }()
+    
+    private let timeStackView: UIStackView = {
+        let view = UIStackView()
+        view.axis = .vertical
+        view.distribution = .fillProportionally
+        view.spacing = 10
+        return view
+    }()
+    
     private let progressView = ProgressView()
     
     private var timer = Timer()
@@ -76,6 +119,15 @@ extension TimerView {
         super.setupViews()
         
         addView(progressView)
+        
+        [
+            elapsedTimeLable,
+            elapsedTimeValueLable,
+            remainingTimeValueLable,
+            remainingTimeLable
+        ].forEach {
+            timeStackView.addArrangedSubview($0)
+        }
     }
     
     override func constraintViews() {
