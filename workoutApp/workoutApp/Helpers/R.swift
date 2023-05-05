@@ -48,6 +48,16 @@ enum R {
             
             static let elapsedTime = "Elapsed Time"
             static let remainingTime = "Remaining Time"
+            static let completed = "Completed"
+            static let remaining = "Remaining"
+            
+            static let workoutStats = "Workout stats"
+            static let averagePace = "Average pace"
+            static let heartRate = "Heart rate"
+            static let totalDistance = "Total distance"
+            static let totalSteps = "Total steps"
+            
+            static let stepsCounter = "Steps Counter"
         }
         
         enum Progress {

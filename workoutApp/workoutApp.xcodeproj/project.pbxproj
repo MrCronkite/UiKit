@@ -161,6 +161,8 @@
 		B242017029F44765002EB259 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B2BE311E2A05A77700A751A2 /* Steps */,
+				B2BE311D2A05A76D00A751A2 /* Stats */,
 				B242017329F4489A002EB259 /* Timer */,
 			);
 			path = Views;
@@ -239,6 +241,20 @@
 				B264648229B7BB7000AA7F5D /* Info.plist */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		B2BE311D2A05A76D00A751A2 /* Stats */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Stats;
+			sourceTree = "<group>";
+		};
+		B2BE311E2A05A77700A751A2 /* Steps */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Steps;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
