@@ -9,7 +9,7 @@ import UIKit
 
 class SessionController: BaseController {
     private let timerView = TimerView()
-    private let statsView = WABaseInfoView(with: R.Strings.Session.workoutStats)
+    private let statsView = StatsView(with: R.Strings.Session.workoutStats)
     private let stepsView = WABaseInfoView(with: R.Strings.Session.stepsCounter)
     
     private let timerDuration = 15.0
