@@ -15,7 +15,7 @@ final class StatsView: WABaseInfoView {
         super.setupViews()
         
         addView(itemView)
-        itemView.configure(with: StatsItemView.StatsItem(imageName: R.Images.Common.downArrow,
+        itemView.configure(with: StatsItemView.StatsItem(imageName: R.Images.Session.Stats.heartRate,
                                                          value: "155 bpm",
                                                          title: R.Strings.Session.heartRate.uppercased()))
         

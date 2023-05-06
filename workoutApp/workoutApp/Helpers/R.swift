@@ -63,6 +63,11 @@ enum R {
         enum Progress {
             static let navBarLeft = "Export"
             static let navBarRight = "Details"
+            
+            static let dailyPerformance = "Daily performance"
+            static let last7Days = "Last 7 days"
+            static let monthlyPerformance = "Monthly performance"
+            static let last10Months = "Last 10 months"
         }
         
         enum Settings {}
@@ -77,6 +82,21 @@ enum R {
                 case .settings: return UIImage(named: "settings_tab")
                 case .progress: return UIImage(named: "progress_tab")
                 }
+            }
+        }
+        
+        enum Overview {
+            static let checkmarkNotDone = UIImage(named: "checkmark_not_done")
+            static let checkmarkDone = UIImage(named: "checkmark_done")
+            static let rightArrow = UIImage(named: "right_arrow")
+        }
+        
+        enum Session {
+            enum Stats {
+                static let averagePace = UIImage(named: "stats_averagePace")
+                static let heartRate = UIImage(named: "stats_heartRate")
+                static let totalDistance = UIImage(named: "stats_totalDistance")
+                static let totalSteps = UIImage(named: "stats_totalSteps")
             }
         }
         
