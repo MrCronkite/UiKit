@@ -10,7 +10,7 @@ import UIKit
 enum R {
     enum Colors {
         static let active = UIColor(hex: "#437BFE")
-        static let inactive = UIColor(hex: "#929DA%")
+        static let inactive = UIColor(hex: "#929DA5")
         
         static let separator = UIColor(hex: "#EBECEF")
         static let titleGray = UIColor(hex: "#545C77")

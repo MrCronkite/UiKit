@@ -32,6 +32,9 @@
 		B2BE31202A06331600A751A2 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BE311F2A06331600A751A2 /* StatsView.swift */; };
 		B2BE31232A06335600A751A2 /* StatsItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BE31222A06335600A751A2 /* StatsItemView.swift */; };
 		B2BEB25D2A0599A9003BE88E /* PercentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BEB25C2A0599A9003BE88E /* PercentView.swift */; };
+		B2D3529B2A07E21A007727A5 /* StepsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3529A2A07E21A007727A5 /* StepsView.swift */; };
+		B2D3529D2A07E5C1007727A5 /* WABarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3529C2A07E5C1007727A5 /* WABarsView.swift */; };
+		B2D3529F2A07E73A007727A5 /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3529E2A07E73A007727A5 /* BarView.swift */; };
 		B2E1B9FF29BA3FA600CBFEB6 /* NavBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E1B9FE29BA3FA600CBFEB6 /* NavBarController.swift */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +66,9 @@
 		B2BE311F2A06331600A751A2 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
 		B2BE31222A06335600A751A2 /* StatsItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsItemView.swift; sourceTree = "<group>"; };
 		B2BEB25C2A0599A9003BE88E /* PercentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercentView.swift; sourceTree = "<group>"; };
+		B2D3529A2A07E21A007727A5 /* StepsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsView.swift; sourceTree = "<group>"; };
+		B2D3529C2A07E5C1007727A5 /* WABarsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WABarsView.swift; sourceTree = "<group>"; };
+		B2D3529E2A07E73A007727A5 /* BarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarView.swift; sourceTree = "<group>"; };
 		B2E1B9FE29BA3FA600CBFEB6 /* NavBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,6 +107,8 @@
 				B2ACA9C029E68340001C9993 /* BaseView.swift */,
 				B2167BFA29E5DDD100D9CA0F /* WAButton.swift */,
 				B21CACD329F2EABF00A49949 /* WABaseInfoView.swift */,
+				B2D3529C2A07E5C1007727A5 /* WABarsView.swift */,
+				B2D3529E2A07E73A007727A5 /* BarView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -259,6 +267,7 @@
 		B2BE311E2A05A77700A751A2 /* Steps */ = {
 			isa = PBXGroup;
 			children = (
+				B2D3529A2A07E21A007727A5 /* StepsView.swift */,
 			);
 			path = Steps;
 			sourceTree = "<group>";
@@ -354,14 +363,17 @@
 				B21CACD429F2EABF00A49949 /* WABaseInfoView.swift in Sources */,
 				B242017229F4477F002EB259 /* TimerView.swift in Sources */,
 				B242017529F448AD002EB259 /* ProgressView.swift in Sources */,
+				B2D3529B2A07E21A007727A5 /* StepsView.swift in Sources */,
 				B230504229E47AC500D1CA4A /* ProgressController.swift in Sources */,
 				B264647729B7BB6E00AA7F5D /* SceneDelegate.swift in Sources */,
 				B2BE31232A06335600A751A2 /* StatsItemView.swift in Sources */,
 				B259814E29B8643900A18A9A /* R.swift in Sources */,
+				B2D3529F2A07E73A007727A5 /* BarView.swift in Sources */,
 				B230503729E4749F00D1CA4A /* BaseController.swift in Sources */,
 				B204EF6B29E73CEA00BD0E15 /* Date + ext.swift in Sources */,
 				B2ACA9C129E68340001C9993 /* BaseView.swift in Sources */,
 				B204EF6929E7385300BD0E15 /* WeekDayView.swift in Sources */,
+				B2D3529D2A07E5C1007727A5 /* WABarsView.swift in Sources */,
 				B2BE31202A06331600A751A2 /* StatsView.swift in Sources */,
 				B230503929E4771F00D1CA4A /* UIView.swift in Sources */,
 				B259814C29B8636600A18A9A /* UIColor.swift in Sources */,
