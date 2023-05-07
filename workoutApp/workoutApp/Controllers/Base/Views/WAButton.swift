@@ -79,13 +79,13 @@ private extension WAButton {
         switch type {
         case .primery:
             lable.textColor = R.Colors.inactive
-            lable.font = R.Fonts.helveticaRegular(witf: 13)
+            lable.font = R.Fonts.helvelticaRegular(with: 13)
             iconView.tintColor = R.Colors.inactive
         case .secondary:
             backgroundColor = R.Colors.secondary
             layer.cornerRadius = 14
             lable.textColor = R.Colors.active
-            lable.font = R.Fonts.helveticaRegular(witf: 15)
+            lable.font = R.Fonts.helvelticaRegular(with: 15)
             lable.textColor = R.Colors.active
         }
         

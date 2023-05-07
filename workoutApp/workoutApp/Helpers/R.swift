@@ -107,7 +107,7 @@ enum R {
     }
     
     enum Fonts {
-        static func helveticaRegular(witf size: CGFloat) -> UIFont {
+        static func helvelticaRegular(with size: CGFloat) -> UIFont {
             UIFont(name: "Helvetica", size: size) ?? UIFont()
         }
     }

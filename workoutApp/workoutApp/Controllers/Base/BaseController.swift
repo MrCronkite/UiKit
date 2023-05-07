@@ -49,7 +49,7 @@ extension BaseController {
         button.setTitle(title, for: .normal)
         button.setTitleColor(R.Colors.active, for: .normal)
         button.setTitleColor(R.Colors.inactive, for: .disabled)
-        button.titleLabel?.font = R.Fonts.helveticaRegular(witf: 17)
+        button.titleLabel?.font = R.Fonts.helvelticaRegular(with: 17)
         
         switch position {
         case .left:

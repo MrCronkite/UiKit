@@ -20,7 +20,7 @@ extension TimerView {
         
         private let percentLable: UILabel = {
             let lable = UILabel()
-            lable.font = R.Fonts.helveticaRegular(witf: 23)
+            lable.font = R.Fonts.helvelticaRegular(with: 23)
             lable.textColor = R.Colors.titleGray
             lable.textAlignment = .center
             return lable
@@ -28,7 +28,7 @@ extension TimerView {
         
         private let subTitleLabel: UILabel = {
             let lable = UILabel()
-            lable.font = R.Fonts.helveticaRegular(witf: 10)
+            lable.font = R.Fonts.helvelticaRegular(with: 10)
             lable.textColor = R.Colors.inactive
             lable.textAlignment = .center
             return lable

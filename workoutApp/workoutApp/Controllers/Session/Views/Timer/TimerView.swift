@@ -18,7 +18,7 @@ final class TimerView: WABaseInfoView {
     private let elapsedTimeLable: UILabel = {
         let lable = UILabel()
         lable.text = R.Strings.Session.elapsedTime
-        lable.font = R.Fonts.helveticaRegular(witf: 14)
+        lable.font = R.Fonts.helvelticaRegular(with: 14)
         lable.textColor = R.Colors.inactive
         lable.textAlignment = .center
         return lable
@@ -26,7 +26,7 @@ final class TimerView: WABaseInfoView {
     
     private let elapsedTimeValueLable: UILabel = {
         let lable = UILabel()
-        lable.font = R.Fonts.helveticaRegular(witf: 46)
+        lable.font = R.Fonts.helvelticaRegular(with: 46)
         lable.textColor = R.Colors.titleGray
         lable.textAlignment = .center
         return lable
@@ -35,7 +35,7 @@ final class TimerView: WABaseInfoView {
     private let remainingTimeLable: UILabel = {
         let lable = UILabel()
         lable.text = R.Strings.Session.remainingTime
-        lable.font = R.Fonts.helveticaRegular(witf: 13)
+        lable.font = R.Fonts.helvelticaRegular(with: 13)
         lable.textColor = R.Colors.inactive
         lable.textAlignment = .center
         return lable
@@ -43,7 +43,7 @@ final class TimerView: WABaseInfoView {
     
     private let remainingTimeValueLable: UILabel = {
         let lable = UILabel()
-        lable.font = R.Fonts.helveticaRegular(witf: 13)
+        lable.font = R.Fonts.helvelticaRegular(with: 13)
         lable.textColor = R.Colors.titleGray
         lable.textAlignment = .center
         return lable

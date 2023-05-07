@@ -11,14 +11,14 @@ class WABaseInfoView: BaseView {
     
     private let titleLabel: UILabel = {
         let lable = UILabel()
-        lable.font = R.Fonts.helveticaRegular(witf: 13)
+        lable.font = R.Fonts.helvelticaRegular(with: 13)
         lable.textColor = R.Colors.inactive
         return lable
     }()
     
     private let button = WAButton(with: .primery)
     
-    private let contentView: UIView = {
+    let contentView: UIView = {
         let view = UIView()
         view.backgroundColor = .white
         view.layer.borderColor = R.Colors.separator.cgColor

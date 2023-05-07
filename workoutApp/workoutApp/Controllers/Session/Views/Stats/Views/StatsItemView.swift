@@ -7,9 +7,37 @@
 
 import UIKit
 
+enum StatsItem {
+    case heartRate(value: String)
+    case averagePace(value: String)
+    case totalDistance(value: String)
+    case totalSteps(value: String)
+    
+    var data: StatsItemView.StatsData {
+        switch self {
+        case .heartRate(let value):
+            return .init(imageName: R.Images.Session.Stats.heartRate,
+                         value: "\(value) bpm",
+                         title: R.Strings.Session.heartRate)
+        case .averagePace(let value):
+            return .init(imageName: R.Images.Session.Stats.averagePace,
+                         value: value + " / km",
+                         title: R.Strings.Session.averagePace)
+        case .totalSteps(let value):
+            return .init(imageName: R.Images.Session.Stats.totalSteps,
+                         value: value,
+                         title: R.Strings.Session.totalSteps)
+        case .totalDistance(let value):
+            return .init(imageName: R.Images.Session.Stats.totalDistance,
+                         value: value + " km",
+                         title: R.Strings.Session.totalDistance)
+        }
+    }
+}
+
 final class StatsItemView: BaseView {
     
-    struct StatsItem {
+    struct StatsData {
         let imageName: UIImage?
         let value: String
         let title: String
@@ -19,14 +47,14 @@ final class StatsItemView: BaseView {
     
     private let valueLable: UILabel = {
        let lable = UILabel()
-        lable.font = R.Fonts.helveticaRegular(witf: 17)
+        lable.font = R.Fonts.helvelticaRegular(with: 17)
         lable.textColor = R.Colors.titleGray
         return lable
     }()
     
     private let titleLable: UILabel = {
        let lable = UILabel()
-        lable.font = R.Fonts.helveticaRegular(witf: 10)
+        lable.font = R.Fonts.helvelticaRegular(with: 10)
         lable.textColor = R.Colors.inactive
         return lable
     }()
@@ -38,9 +66,9 @@ final class StatsItemView: BaseView {
     }()
     
     func configure(with item: StatsItem) {
-        imageView.image = item.imageName
-        valueLable.text = item.value
-        titleLable.text = item.title
+        imageView.image = item.data.imageName
+        valueLable.text = item.data.value
+        titleLable.text = item.data.title.uppercased()
     }
 }
 

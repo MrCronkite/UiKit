@@ -13,7 +13,7 @@ final class OverviewNavBar: BaseView {
         let label = UILabel()
         label.text = R.Strings.NavBar.overview
         label.textColor = R.Colors.titleGray
-        label.font = R.Fonts.helveticaRegular(witf: 22)
+        label.font = R.Fonts.helvelticaRegular(with: 22)
         return label
     }()
     

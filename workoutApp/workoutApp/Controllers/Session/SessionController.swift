@@ -16,7 +16,7 @@ class SessionController: BaseController {
     
     override func navBarLeftButtonHandler() {
         if timerView.state == .isStopped {
-            timerView.startTimer {_ in 
+            timerView.startTimer {_ in
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                     self.navBarRightButtonHandler()
                 }
@@ -29,7 +29,7 @@ class SessionController: BaseController {
         setTitleNavBarButton(timerView.state == .isRuning
                              ? R.Strings.Session.navBarLeft : R.Strings.Session.navBarStart,
                              at: .left)
-       
+        
     }
     
     override func navBarRightButtonHandler() {
@@ -41,12 +41,12 @@ class SessionController: BaseController {
 }
 
 extension SessionController {
-   override func setupViews() {
+    override func setupViews() {
         super.setupViews()
-    
-       view.addView(timerView)
-       view.addView(statsView)
-       view.addView(stepsView)
+        
+        view.addView(timerView)
+        view.addView(statsView)
+        view.addView(stepsView)
     }
     
     override func constraintViews() {
@@ -60,7 +60,6 @@ extension SessionController {
             statsView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15),
             statsView.topAnchor.constraint(equalTo: timerView.bottomAnchor, constant: 10),
             statsView.trailingAnchor.constraint(equalTo: view.centerXAnchor, constant: -7.5),
-            statsView.heightAnchor.constraint(equalToConstant: 200),
             
             stepsView.leadingAnchor.constraint(equalTo: view.centerXAnchor, constant: 7.5),
             stepsView.topAnchor.constraint(equalTo: statsView.topAnchor),
@@ -80,5 +79,10 @@ extension SessionController {
         addNavBarButton(at: .right, with: R.Strings.Session.navBarRight)
         
         timerView.configure(with: timerDuration, progress: 0)
+        
+        statsView.configure(with: [.heartRate(value: "155"),
+                                   .averagePace(value: "8'20''"),
+                                   .totalSteps(value: "7,682"),
+                                   .totalDistance(value: "8.25")])
     }
 }
