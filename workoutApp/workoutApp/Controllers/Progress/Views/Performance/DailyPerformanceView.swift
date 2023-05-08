@@ -27,9 +27,9 @@ extension DailyPerformanceView {
         
         NSLayoutConstraint.activate([
             barsView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 15),
-            barsView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: -10),
+            barsView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
             barsView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
-            barsView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 15)
+            barsView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -15)
         ])
     }
     

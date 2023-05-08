@@ -30,7 +30,8 @@ extension ProgressController {
         NSLayoutConstraint.activate([
             dailyPerformanceView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15),
             dailyPerformanceView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 15),
-            dailyPerformanceView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15)
+            dailyPerformanceView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15),
+            dailyPerformanceView.heightAnchor.constraint(equalTo: dailyPerformanceView.widthAnchor, multiplier: 0.68)
         ])
     }
     
@@ -42,5 +43,15 @@ extension ProgressController {
         
         addNavBarButton(at: .left, with: R.Strings.Progress.navBarLeft)
         addNavBarButton(at: .right, with: R.Strings.Progress.navBarRight)
+        
+        dailyPerformanceView.configure(with: [
+            .init(value: "1", heighParm: 0.1, title: "Mon"),
+            .init(value: "2", heighParm: 0.4, title: "Teu"),
+            .init(value: "3", heighParm: 0.6, title: "Wen"),
+            .init(value: "4", heighParm: 0.8, title: "Thu"),
+            .init(value: "5", heighParm: 1, title: "Fri"),
+            .init(value: "3", heighParm: 0.6, title: "Sat"),
+            .init(value: "2", heighParm: 0.4, title: "Sun"),
+        ])
     }
 }
