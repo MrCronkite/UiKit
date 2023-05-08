@@ -9,9 +9,11 @@ import UIKit
  
 final class MontlyPerformanceView: WABaseInfoView {
     
-    private let chartsView = UIView()
+    private let chartsView = WAChartsView()
     
-    
+    func configure(with items: [WAChartsView.Data]) {
+        chartsView.configure(with: items)
+    }
 }
 
 extension MontlyPerformanceView {

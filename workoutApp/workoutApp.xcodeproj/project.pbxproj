@@ -34,6 +34,9 @@
 		B2BE31232A06335600A751A2 /* StatsItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BE31222A06335600A751A2 /* StatsItemView.swift */; };
 		B2BEB25D2A0599A9003BE88E /* PercentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BEB25C2A0599A9003BE88E /* PercentView.swift */; };
 		B2D21F142A0983CD0059C259 /* MontlyPerformanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D21F132A0983CD0059C259 /* MontlyPerformanceView.swift */; };
+		B2D21F182A098A930059C259 /* WAChartsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D21F172A098A930059C259 /* WAChartsView.swift */; };
+		B2D21F1A2A098E6F0059C259 /* YAxisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D21F192A098E6F0059C259 /* YAxisView.swift */; };
+		B2D21F1C2A0991B40059C259 /* XAxisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D21F1B2A0991B40059C259 /* XAxisView.swift */; };
 		B2D3529B2A07E21A007727A5 /* StepsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3529A2A07E21A007727A5 /* StepsView.swift */; };
 		B2D3529D2A07E5C1007727A5 /* WABarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3529C2A07E5C1007727A5 /* WABarsView.swift */; };
 		B2D3529F2A07E73A007727A5 /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3529E2A07E73A007727A5 /* BarView.swift */; };
@@ -70,6 +73,9 @@
 		B2BE31222A06335600A751A2 /* StatsItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsItemView.swift; sourceTree = "<group>"; };
 		B2BEB25C2A0599A9003BE88E /* PercentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercentView.swift; sourceTree = "<group>"; };
 		B2D21F132A0983CD0059C259 /* MontlyPerformanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MontlyPerformanceView.swift; sourceTree = "<group>"; };
+		B2D21F172A098A930059C259 /* WAChartsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WAChartsView.swift; sourceTree = "<group>"; };
+		B2D21F192A098E6F0059C259 /* YAxisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YAxisView.swift; sourceTree = "<group>"; };
+		B2D21F1B2A0991B40059C259 /* XAxisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XAxisView.swift; sourceTree = "<group>"; };
 		B2D3529A2A07E21A007727A5 /* StepsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsView.swift; sourceTree = "<group>"; };
 		B2D3529C2A07E5C1007727A5 /* WABarsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WABarsView.swift; sourceTree = "<group>"; };
 		B2D3529E2A07E73A007727A5 /* BarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarView.swift; sourceTree = "<group>"; };
@@ -108,11 +114,11 @@
 		B21CACD229F2EAA000A49949 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B2D21F162A0987BF0059C259 /* WACharsView */,
+				B2D21F152A0987A10059C259 /* WABarsView */,
 				B2ACA9C029E68340001C9993 /* BaseView.swift */,
 				B2167BFA29E5DDD100D9CA0F /* WAButton.swift */,
 				B21CACD329F2EABF00A49949 /* WABaseInfoView.swift */,
-				B2D3529C2A07E5C1007727A5 /* WABarsView.swift */,
-				B2D3529E2A07E73A007727A5 /* BarView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -310,6 +316,25 @@
 			path = MonthlyPerformanceView;
 			sourceTree = "<group>";
 		};
+		B2D21F152A0987A10059C259 /* WABarsView */ = {
+			isa = PBXGroup;
+			children = (
+				B2D3529C2A07E5C1007727A5 /* WABarsView.swift */,
+				B2D3529E2A07E73A007727A5 /* BarView.swift */,
+			);
+			path = WABarsView;
+			sourceTree = "<group>";
+		};
+		B2D21F162A0987BF0059C259 /* WACharsView */ = {
+			isa = PBXGroup;
+			children = (
+				B2D21F172A098A930059C259 /* WAChartsView.swift */,
+				B2D21F192A098E6F0059C259 /* YAxisView.swift */,
+				B2D21F1B2A0991B40059C259 /* XAxisView.swift */,
+			);
+			path = WACharsView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -391,12 +416,15 @@
 				B230504029E47AB400D1CA4A /* SessionController.swift in Sources */,
 				B2BEB25D2A0599A9003BE88E /* PercentView.swift in Sources */,
 				B28713C02A08D8A000197763 /* DailyPerformanceView.swift in Sources */,
+				B2D21F182A098A930059C259 /* WAChartsView.swift in Sources */,
 				B2167BFB29E5DDD100D9CA0F /* WAButton.swift in Sources */,
 				B21CACD429F2EABF00A49949 /* WABaseInfoView.swift in Sources */,
 				B242017229F4477F002EB259 /* TimerView.swift in Sources */,
 				B242017529F448AD002EB259 /* ProgressView.swift in Sources */,
 				B2D3529B2A07E21A007727A5 /* StepsView.swift in Sources */,
 				B230504229E47AC500D1CA4A /* ProgressController.swift in Sources */,
+				B2D21F1C2A0991B40059C259 /* XAxisView.swift in Sources */,
+				B2D21F1A2A098E6F0059C259 /* YAxisView.swift in Sources */,
 				B264647729B7BB6E00AA7F5D /* SceneDelegate.swift in Sources */,
 				B2BE31232A06335600A751A2 /* StatsItemView.swift in Sources */,
 				B259814E29B8643900A18A9A /* R.swift in Sources */,
