@@ -27,6 +27,7 @@
 		B264647E29B7BB7000AA7F5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B264647D29B7BB7000AA7F5D /* Assets.xcassets */; };
 		B264648129B7BB7000AA7F5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B264647F29B7BB7000AA7F5D /* LaunchScreen.storyboard */; };
 		B264648B29B7C6F700AA7F5D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B264648A29B7C6F700AA7F5D /* TabBarController.swift */; };
+		B28713C02A08D8A000197763 /* DailyPerformanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28713BF2A08D8A000197763 /* DailyPerformanceView.swift */; };
 		B2ACA9BF29E6829E001C9993 /* OverviewNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ACA9BE29E6829E001C9993 /* OverviewNavBar.swift */; };
 		B2ACA9C129E68340001C9993 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ACA9C029E68340001C9993 /* BaseView.swift */; };
 		B2BE31202A06331600A751A2 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BE311F2A06331600A751A2 /* StatsView.swift */; };
@@ -61,6 +62,7 @@
 		B264648029B7BB7000AA7F5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B264648229B7BB7000AA7F5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B264648A29B7C6F700AA7F5D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		B28713BF2A08D8A000197763 /* DailyPerformanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyPerformanceView.swift; sourceTree = "<group>"; };
 		B2ACA9BE29E6829E001C9993 /* OverviewNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewNavBar.swift; sourceTree = "<group>"; };
 		B2ACA9C029E68340001C9993 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		B2BE311F2A06331600A751A2 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 		B230503D29E47A8E00D1CA4A /* Progress */ = {
 			isa = PBXGroup;
 			children = (
+				B28713BD2A08D87900197763 /* Views */,
 				B230504129E47AC500D1CA4A /* ProgressController.swift */,
 			);
 			path = Progress;
@@ -253,6 +256,22 @@
 				B264648229B7BB7000AA7F5D /* Info.plist */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		B28713BD2A08D87900197763 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B28713BE2A08D88100197763 /* Performance */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B28713BE2A08D88100197763 /* Performance */ = {
+			isa = PBXGroup;
+			children = (
+				B28713BF2A08D8A000197763 /* DailyPerformanceView.swift */,
+			);
+			path = Performance;
 			sourceTree = "<group>";
 		};
 		B2BE311D2A05A76D00A751A2 /* Stats */ = {
@@ -359,6 +378,7 @@
 				B2E1B9FF29BA3FA600CBFEB6 /* NavBarController.swift in Sources */,
 				B230504029E47AB400D1CA4A /* SessionController.swift in Sources */,
 				B2BEB25D2A0599A9003BE88E /* PercentView.swift in Sources */,
+				B28713C02A08D8A000197763 /* DailyPerformanceView.swift in Sources */,
 				B2167BFB29E5DDD100D9CA0F /* WAButton.swift in Sources */,
 				B21CACD429F2EABF00A49949 /* WABaseInfoView.swift in Sources */,
 				B242017229F4477F002EB259 /* TimerView.swift in Sources */,
