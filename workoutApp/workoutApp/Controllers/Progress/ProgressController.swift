@@ -12,6 +12,9 @@ class ProgressController: BaseController {
     private let dailyPerformanceView = DailyPerformanceView(with: R.Strings.Progress.dailyPerformance,
                                                             buttonTitle: R.Strings.Progress.last7Days.uppercased())
 
+    private let montlyPerformanceView = MontlyPerformanceView(with: R.Strings.Progress.monthlyPerformance,
+                                                            buttonTitle: R.Strings.Progress.last10Months.uppercased())
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -22,6 +25,7 @@ extension ProgressController {
         super.setupViews()
         
         view.addView(dailyPerformanceView)
+        view.addView(montlyPerformanceView)
     }
     
     override func constraintViews() {
@@ -31,7 +35,13 @@ extension ProgressController {
             dailyPerformanceView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15),
             dailyPerformanceView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 15),
             dailyPerformanceView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15),
-            dailyPerformanceView.heightAnchor.constraint(equalTo: dailyPerformanceView.widthAnchor, multiplier: 0.68)
+            dailyPerformanceView.heightAnchor.constraint(equalTo: dailyPerformanceView.widthAnchor, multiplier: 0.68),
+            
+            montlyPerformanceView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15),
+            montlyPerformanceView.topAnchor.constraint(equalTo: dailyPerformanceView.bottomAnchor, constant: 15),
+            montlyPerformanceView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15),
+            montlyPerformanceView.heightAnchor.constraint(equalTo: montlyPerformanceView.widthAnchor, multiplier: 1.06)
+            
         ])
     }
     
