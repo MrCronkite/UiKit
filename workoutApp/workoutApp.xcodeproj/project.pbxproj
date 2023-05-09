@@ -37,6 +37,7 @@
 		B2D21F182A098A930059C259 /* WAChartsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D21F172A098A930059C259 /* WAChartsView.swift */; };
 		B2D21F1A2A098E6F0059C259 /* YAxisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D21F192A098E6F0059C259 /* YAxisView.swift */; };
 		B2D21F1C2A0991B40059C259 /* XAxisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D21F1B2A0991B40059C259 /* XAxisView.swift */; };
+		B2D21F1E2A0A1CCA0059C259 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D21F1D2A0A1CCA0059C259 /* ChartView.swift */; };
 		B2D3529B2A07E21A007727A5 /* StepsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3529A2A07E21A007727A5 /* StepsView.swift */; };
 		B2D3529D2A07E5C1007727A5 /* WABarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3529C2A07E5C1007727A5 /* WABarsView.swift */; };
 		B2D3529F2A07E73A007727A5 /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3529E2A07E73A007727A5 /* BarView.swift */; };
@@ -76,6 +77,7 @@
 		B2D21F172A098A930059C259 /* WAChartsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WAChartsView.swift; sourceTree = "<group>"; };
 		B2D21F192A098E6F0059C259 /* YAxisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YAxisView.swift; sourceTree = "<group>"; };
 		B2D21F1B2A0991B40059C259 /* XAxisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XAxisView.swift; sourceTree = "<group>"; };
+		B2D21F1D2A0A1CCA0059C259 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		B2D3529A2A07E21A007727A5 /* StepsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsView.swift; sourceTree = "<group>"; };
 		B2D3529C2A07E5C1007727A5 /* WABarsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WABarsView.swift; sourceTree = "<group>"; };
 		B2D3529E2A07E73A007727A5 /* BarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarView.swift; sourceTree = "<group>"; };
@@ -331,6 +333,7 @@
 				B2D21F172A098A930059C259 /* WAChartsView.swift */,
 				B2D21F192A098E6F0059C259 /* YAxisView.swift */,
 				B2D21F1B2A0991B40059C259 /* XAxisView.swift */,
+				B2D21F1D2A0A1CCA0059C259 /* ChartView.swift */,
 			);
 			path = WACharsView;
 			sourceTree = "<group>";
@@ -434,6 +437,7 @@
 				B2ACA9C129E68340001C9993 /* BaseView.swift in Sources */,
 				B204EF6929E7385300BD0E15 /* WeekDayView.swift in Sources */,
 				B2D3529D2A07E5C1007727A5 /* WABarsView.swift in Sources */,
+				B2D21F1E2A0A1CCA0059C259 /* ChartView.swift in Sources */,
 				B2BE31202A06331600A751A2 /* StatsView.swift in Sources */,
 				B230503929E4771F00D1CA4A /* UIView.swift in Sources */,
 				B259814C29B8636600A18A9A /* UIColor.swift in Sources */,
