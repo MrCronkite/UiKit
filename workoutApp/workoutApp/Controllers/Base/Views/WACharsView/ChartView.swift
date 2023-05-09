@@ -24,7 +24,8 @@ final class ChartView: BaseView {
     func configurator(with data: [WAChartsView.Data]) {
         
         layoutIfNeeded()
-        addDashesLines()
+        drawChart(with: data)
+        drawDashLine()
     }
     
 }
@@ -55,7 +56,7 @@ extension ChartView {
 }
 
 private extension ChartView {
-    func addDashesLines(with counts: Int? = nil) {
+    func drawDashLine(with counts: Int? = nil) {
         (0..<9).map { CGFloat($0) }.forEach {
             addDashLine(at: bounds.height / 9 * $0)
         }
@@ -76,5 +77,35 @@ private extension ChartView {
         dashLayer.path = dashPath
         
         layer.addSublayer(dashLayer)
+    }
+    
+    func drawChart(with data: [WAChartsView.Data]) {
+        guard let maxValue = data.sorted(by: { $0.value > $1.value }).first?.value else { return }
+        let valuePoints = data.enumerated().map { CGPoint(x: CGFloat($0), y: CGFloat($1.value)) }
+        let chartHeight = bounds.height / CGFloat(maxValue + 10)
+        
+        let points = valuePoints.map {
+            let x = bounds.width / CGFloat(valuePoints.count - 1) * $0.x
+            let y = bounds.height - $0.y * chartHeight
+            return CGPoint(x: x, y: y)
+        }
+        
+        let chartPath = UIBezierPath()
+        chartPath.move(to: points[0])
+        
+        points.forEach {
+            chartPath.addLine(to: $0)
+        }
+        
+        let chartLayer = CAShapeLayer()
+        chartLayer.path = chartPath.cgPath
+        chartLayer.fillColor = UIColor.clear.cgColor
+        chartLayer.strokeColor = R.Colors.active.cgColor
+        chartLayer.lineWidth = 3
+        chartLayer.strokeEnd = 1
+        chartLayer.lineCap = .round
+        chartLayer.lineJoin = .round
+        
+        layer.addSublayer(chartLayer)
     }
 }
