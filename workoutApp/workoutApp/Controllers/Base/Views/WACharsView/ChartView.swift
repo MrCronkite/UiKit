@@ -24,8 +24,9 @@ final class ChartView: BaseView {
     func configurator(with data: [WAChartsView.Data]) {
         
         layoutIfNeeded()
-        drawChart(with: data)
+        
         drawDashLine()
+        drawChart(with: data)
     }
     
 }
@@ -95,6 +96,7 @@ private extension ChartView {
         
         points.forEach {
             chartPath.addLine(to: $0)
+            drawChartDot(at: $0)
         }
         
         let chartLayer = CAShapeLayer()
@@ -107,5 +109,19 @@ private extension ChartView {
         chartLayer.lineJoin = .round
         
         layer.addSublayer(chartLayer)
+    }
+    
+    func drawChartDot(at point: CGPoint) {
+        let dotPath = UIBezierPath()
+        dotPath.move(to: point)
+        dotPath.addLine(to: point)
+        
+        let dotLayer = CAShapeLayer()
+        dotLayer.path = dotPath.cgPath
+        dotLayer.strokeColor = R.Colors.active.cgColor
+        dotLayer.lineCap = .round
+        dotLayer.lineWidth = 10
+        
+        layer.addSublayer(dotLayer)
     }
 }
