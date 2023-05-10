@@ -12,6 +12,7 @@
 		B204EF6B29E73CEA00BD0E15 /* Date + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B204EF6A29E73CEA00BD0E15 /* Date + ext.swift */; };
 		B2167BFB29E5DDD100D9CA0F /* WAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2167BFA29E5DDD100D9CA0F /* WAButton.swift */; };
 		B21CACD429F2EABF00A49949 /* WABaseInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21CACD329F2EABF00A49949 /* WABaseInfoView.swift */; };
+		B229DC4B2A0B78E200AC608C /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B229DC4A2A0B78E200AC608C /* SectionHeaderView.swift */; };
 		B230503729E4749F00D1CA4A /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B230503629E4749F00D1CA4A /* BaseController.swift */; };
 		B230503929E4771F00D1CA4A /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B230503829E4771F00D1CA4A /* UIView.swift */; };
 		B230504029E47AB400D1CA4A /* SessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B230503F29E47AB400D1CA4A /* SessionController.swift */; };
@@ -50,6 +51,7 @@
 		B204EF6A29E73CEA00BD0E15 /* Date + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + ext.swift"; sourceTree = "<group>"; };
 		B2167BFA29E5DDD100D9CA0F /* WAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WAButton.swift; sourceTree = "<group>"; };
 		B21CACD329F2EABF00A49949 /* WABaseInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WABaseInfoView.swift; sourceTree = "<group>"; };
+		B229DC4A2A0B78E200AC608C /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
 		B230503629E4749F00D1CA4A /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
 		B230503829E4771F00D1CA4A /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		B230503F29E47AB400D1CA4A /* SessionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionController.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 		B2167BF929E5DD6C00D9CA0F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B229DC492A0B78C000AC608C /* CollectionView */,
 				B204EF6529E7362000BD0E15 /* WeekView */,
 				B2ACA9BE29E6829E001C9993 /* OverviewNavBar.swift */,
 			);
@@ -123,6 +126,14 @@
 				B21CACD329F2EABF00A49949 /* WABaseInfoView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		B229DC492A0B78C000AC608C /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				B229DC4A2A0B78E200AC608C /* SectionHeaderView.swift */,
+			);
+			path = CollectionView;
 			sourceTree = "<group>";
 		};
 		B230503529E473FC00D1CA4A /* Controllers */ = {
@@ -435,6 +446,7 @@
 				B230503729E4749F00D1CA4A /* BaseController.swift in Sources */,
 				B204EF6B29E73CEA00BD0E15 /* Date + ext.swift in Sources */,
 				B2ACA9C129E68340001C9993 /* BaseView.swift in Sources */,
+				B229DC4B2A0B78E200AC608C /* SectionHeaderView.swift in Sources */,
 				B204EF6929E7385300BD0E15 /* WeekDayView.swift in Sources */,
 				B2D3529D2A07E5C1007727A5 /* WABarsView.swift in Sources */,
 				B2D21F1E2A0A1CCA0059C259 /* ChartView.swift in Sources */,
