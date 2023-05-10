@@ -113,7 +113,7 @@ extension OverviewController: UICollectionViewDelegateFlowLayout {
                                                                          withReuseIdentifier: SectionHeaderView.id,
                                                                          for: indexPath) as? SectionHeaderView else { return UICollectionViewCell() }
         
-        view.configure(with: Date())
+        view.configure(with: dataSource[indexPath.section].date)
         return view
     }
     
@@ -133,7 +133,20 @@ extension OverviewController: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TrainingCellView.id,
                                                             for: indexPath) as? TrainingCellView else { return UICollectionViewCell() }
         
-        cell.configure(with: "text", subtitle: "wrwew", isDone: true)
+        let item = dataSource[indexPath.section].items[indexPath.row]
+        
+        let roundedType: CellRoundedType
+        if indexPath.row == 0 && indexPath.row == dataSource[indexPath.section].items.count - 1 {
+            roundedType = .all
+        } else if indexPath.row == 0 {
+            roundedType = .top
+        } else if indexPath.row == dataSource[indexPath.section].items.count - 1 {
+            roundedType = .bottom
+        } else {
+            roundedType = .notRound
+        }
+        
+        cell.configure(with: item.title, subtitle: item.subtitle, isDone: item.isDone, roundedType: roundedType)
         return cell
     }
     

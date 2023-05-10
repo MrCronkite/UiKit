@@ -23,7 +23,6 @@ final class SectionHeaderView: UICollectionReusableView {
         
         setupViews()
         constraintView()
-        configureView()
     }
     
     required init?(coder: NSCoder) {
@@ -31,7 +30,6 @@ final class SectionHeaderView: UICollectionReusableView {
         
         setupViews()
         constraintView()
-        configureView()
     }
     
     func configure(with date: Date) {
@@ -54,9 +52,5 @@ private extension SectionHeaderView {
             title.centerXAnchor.constraint(equalTo: centerXAnchor),
             title.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
-    }
-    
-    func configureView() {
-//        backgroundColor = .white
     }
 }
