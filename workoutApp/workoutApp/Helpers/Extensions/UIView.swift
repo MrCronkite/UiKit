@@ -43,8 +43,24 @@ extension UIView {
         UIView.animate(withDuration: 0.15) { self.alpha = 1 }
     }
     
-    func addView(_ view: UIView) {
+    @objc func addView(_ view: UIView) {
         addSubview(view)
         view.translatesAutoresizingMaskIntoConstraints = false
     }
+    
+    func roundCorners(_ corners: UIRectCorner, radius: CGFloat) {
+        let path = UIBezierPath(roundedRect: bounds,
+                                byRoundingCorners: corners,
+                                cornerRadii: CGSize(width: radius, height: radius))
+        
+        let borderLayer = CAShapeLayer()
+        borderLayer.frame = bounds
+        borderLayer.path = path.cgPath
+        borderLayer.strokeColor = R.Colors.separator.cgColor
+        borderLayer.fillColor = UIColor.clear.cgColor
+        borderLayer.lineWidth = 1
+        layer.addSublayer(borderLayer)
+    }
+    
+    
 }
