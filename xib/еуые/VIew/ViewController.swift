@@ -35,6 +35,12 @@ extension ViewController {
     }
     
     @objc func handlerTap(_ gesture: UITapGestureRecognizer) {
-        print("hello image")
+        let storyboard = UIStoryboard(name: "TabBarStoryboard", bundle: nil)
+        let tabBarController = storyboard.instantiateViewController(withIdentifier: "tabBarId")
+//        if let sheet = tabBarController.sheetPresentationController {
+//            sheet.detents = [.medium()]
+//        }
+        self.present(tabBarController, animated: true)
+        
     }
 }
