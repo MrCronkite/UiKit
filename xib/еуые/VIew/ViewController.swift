@@ -7,21 +7,20 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-    @IBOutlet private weak var firstView: CustomView!
+final class ViewController: UIViewController {
     
-    @IBOutlet private weak var secondView: CustomView!
-    
-    @IBOutlet private weak var thirdView: CustomView!
+    @IBOutlet weak var picker: UIPickerView!
     
     @IBOutlet private weak var imageLogo: UIImageView!
+    
+    let data = ["Опция 1", "Опция 2", "Опция 3", "Опция 4", "Опция 5"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        firstView.configureLabel(title: "hello")
-        secondView.configureLabel(title: "Vlad")
-        thirdView.configureLabel(title: "Shimchenko")
+        //self.lible.configureLabel(title: "hello")
+        picker.delegate = self
+        picker.dataSource = self
         
         setupView()
     }
@@ -44,3 +43,26 @@ extension ViewController {
         
     }
 }
+
+
+extension ViewController: UIPickerViewDelegate {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return data[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        let selected = data[row]
+        print("Выбрано: \(selected)")
+    }
+}
+
+extension ViewController: UIPickerViewDataSource {
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        data.count
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+}
+

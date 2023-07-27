@@ -16,23 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="DNH-bT-s6o">
-                                <rect key="frame" x="16" y="75" width="361" height="418"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eqN-kC-qsQ" customClass="CustomView" customModule="еуые" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="361" height="128"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y8r-QW-mpD" customClass="CustomView" customModule="еуые" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="145" width="361" height="128"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qud-Pm-vZm" customClass="CustomView" customModule="еуые" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="290" width="361" height="128"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    </view>
-                                </subviews>
-                            </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5jO-HR-j4s">
                                 <rect key="frame" x="70" y="590" width="253" height="128"/>
                                 <color key="backgroundColor" red="0.31079665280000002" green="0.2258482396" blue="0.86078917980000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -40,29 +23,30 @@
                                     <constraint firstAttribute="height" constant="128" id="NJr-FY-dkb"/>
                                 </constraints>
                             </imageView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vbO-5E-MDe">
+                                <rect key="frame" x="0.0" y="109" width="393" height="381"/>
+                            </pickerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="5jO-HR-j4s" firstAttribute="top" secondItem="DNH-bT-s6o" secondAttribute="bottom" constant="97" id="07u-g3-VeX"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DNH-bT-s6o" secondAttribute="trailing" constant="16" id="1Yh-Br-Hez"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5jO-HR-j4s" secondAttribute="bottom" constant="100" id="9lk-Hi-Bex"/>
-                            <constraint firstItem="DNH-bT-s6o" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="EBf-7U-ZaU"/>
-                            <constraint firstItem="DNH-bT-s6o" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="Gtp-1J-JAc"/>
+                            <constraint firstItem="5jO-HR-j4s" firstAttribute="top" secondItem="vbO-5E-MDe" secondAttribute="bottom" constant="100" id="M6Y-dE-DHC"/>
+                            <constraint firstItem="vbO-5E-MDe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PI9-mF-cKe"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5jO-HR-j4s" secondAttribute="trailing" constant="70" id="baS-vr-8D5"/>
                             <constraint firstItem="5jO-HR-j4s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="cla-dy-Lod"/>
+                            <constraint firstItem="vbO-5E-MDe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="ill-aC-HjG"/>
+                            <constraint firstItem="vbO-5E-MDe" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="sSs-Tj-WxV"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="firstView" destination="eqN-kC-qsQ" id="ACY-D1-ViP"/>
                         <outlet property="imageLogo" destination="5jO-HR-j4s" id="bm7-E6-be1"/>
-                        <outlet property="secondView" destination="y8r-QW-mpD" id="RLJ-kJ-y7s"/>
-                        <outlet property="thirdView" destination="Qud-Pm-vZm" id="qrp-U8-K4H"/>
+                        <outlet property="picker" destination="vbO-5E-MDe" id="iJB-tG-LF4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="688" y="17"/>
+            <point key="canvasLocation" x="687.78625954198469" y="16.901408450704228"/>
         </scene>
     </scenes>
     <resources>
