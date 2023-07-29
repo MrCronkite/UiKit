@@ -34,12 +34,14 @@ extension ViewController {
     }
     
     @objc func handlerTap(_ gesture: UITapGestureRecognizer) {
-        let storyboard = UIStoryboard(name: "TabBarStoryboard", bundle: nil)
-        let tabBarController = storyboard.instantiateViewController(withIdentifier: "tabBarId")
+//        let storyboard = UIStoryboard(name: "TabBarStoryboard", bundle: nil)
+//        let tabBarController = storyboard.instantiateViewController(withIdentifier: "tabBarId")
 //        if let sheet = tabBarController.sheetPresentationController {
 //            sheet.detents = [.medium()]
 //        }
-        self.present(tabBarController, animated: true)
+        let tabbar = TabBarController()
+        tabbar.modalPresentationStyle = .fullScreen
+        self.present(tabbar, animated: true)
         
     }
 }
