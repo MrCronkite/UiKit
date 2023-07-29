@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B21FBDE72A7586A800891FEE /* PersonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21FBDE62A7586A800891FEE /* PersonController.swift */; };
+		B21FBDE72A7586A800891FEE /* MemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21FBDE62A7586A800891FEE /* MemberViewController.swift */; };
 		B21FBDE92A7586DA00891FEE /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21FBDE82A7586DA00891FEE /* SettingsController.swift */; };
 		B21FBDEB2A758D0A00891FEE /* PlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21FBDEA2A758D0A00891FEE /* PlacesViewController.swift */; };
+		B21FBDED2A758F4700891FEE /* MemberViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B21FBDEC2A758F4700891FEE /* MemberViewController.xib */; };
+		B21FBDF02A75917700891FEE /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21FBDEF2A75917700891FEE /* LocationViewController.swift */; };
 		B22DC9DC2A705F2C008AA833 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22DC9DB2A705F2C008AA833 /* CustomView.swift */; };
 		B22DC9E02A705FDF008AA833 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22DC9DF2A705FDF008AA833 /* UIViewExtension.swift */; };
 		B25F111F2A72ECDB000C3CDD /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25F111E2A72ECDB000C3CDD /* TabBarController.swift */; };
@@ -25,9 +27,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B21FBDE62A7586A800891FEE /* PersonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonController.swift; sourceTree = "<group>"; };
+		B21FBDE62A7586A800891FEE /* MemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberViewController.swift; sourceTree = "<group>"; };
 		B21FBDE82A7586DA00891FEE /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		B21FBDEA2A758D0A00891FEE /* PlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewController.swift; sourceTree = "<group>"; };
+		B21FBDEC2A758F4700891FEE /* MemberViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemberViewController.xib; sourceTree = "<group>"; };
+		B21FBDEF2A75917700891FEE /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		B22DC9DB2A705F2C008AA833 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		B22DC9DF2A705FDF008AA833 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		B25F111E2A72ECDB000C3CDD /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -55,6 +59,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B21FBDEE2A75914A00891FEE /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				B21FBDEF2A75917700891FEE /* LocationViewController.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
 		B25F11192A72EC2B000C3CDD /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +89,7 @@
 		B25F111B2A72EC81000C3CDD /* VIew */ = {
 			isa = PBXGroup;
 			children = (
+				B21FBDEE2A75914A00891FEE /* Location */,
 				B25F11222A7302E5000C3CDD /* Picker */,
 				B25F111D2A72ECBB000C3CDD /* TabBar */,
 				B25F111C2A72ECA9000C3CDD /* Custom */,
@@ -100,9 +113,10 @@
 			isa = PBXGroup;
 			children = (
 				B25F111E2A72ECDB000C3CDD /* TabBarController.swift */,
-				B21FBDE62A7586A800891FEE /* PersonController.swift */,
+				B21FBDE62A7586A800891FEE /* MemberViewController.swift */,
 				B21FBDE82A7586DA00891FEE /* SettingsController.swift */,
 				B21FBDEA2A758D0A00891FEE /* PlacesViewController.swift */,
+				B21FBDEC2A758F4700891FEE /* MemberViewController.xib */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -202,6 +216,7 @@
 			files = (
 				B27F6CED2A6E5F2200998EA5 /* LaunchScreen.storyboard in Resources */,
 				B25F11262A730368000C3CDD /* Picker.xib in Resources */,
+				B21FBDED2A758F4700891FEE /* MemberViewController.xib in Resources */,
 				B27F6CEA2A6E5F2200998EA5 /* Assets.xcassets in Resources */,
 				B27F6CE82A6E5F2000998EA5 /* Main.storyboard in Resources */,
 				B2A4866B2A730CCD00622893 /* CustomView.xib in Resources */,
@@ -220,8 +235,9 @@
 				B21FBDEB2A758D0A00891FEE /* PlacesViewController.swift in Sources */,
 				B27F6CE52A6E5F2000998EA5 /* ViewController.swift in Sources */,
 				B25F11242A7302FE000C3CDD /* Picker.swift in Sources */,
+				B21FBDF02A75917700891FEE /* LocationViewController.swift in Sources */,
 				B22DC9DC2A705F2C008AA833 /* CustomView.swift in Sources */,
-				B21FBDE72A7586A800891FEE /* PersonController.swift in Sources */,
+				B21FBDE72A7586A800891FEE /* MemberViewController.swift in Sources */,
 				B25F111F2A72ECDB000C3CDD /* TabBarController.swift in Sources */,
 				B27F6CE12A6E5F2000998EA5 /* AppDelegate.swift in Sources */,
 				B27F6CE32A6E5F2000998EA5 /* SceneDelegate.swift in Sources */,
@@ -374,11 +390,13 @@
 				DEVELOPMENT_TEAM = LUQ926BAHR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "еуые/SupportingsFilles/Info.plist";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Для предоставления вам информации о местоположении в реальном времени мы запрашиваем доступ к вашей геопозиции.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -402,11 +420,13 @@
 				DEVELOPMENT_TEAM = LUQ926BAHR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "еуые/SupportingsFilles/Info.plist";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Для предоставления вам информации о местоположении в реальном времени мы запрашиваем доступ к вашей геопозиции.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

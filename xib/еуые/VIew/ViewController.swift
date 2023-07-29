@@ -41,7 +41,9 @@ extension ViewController {
 //        }
         let tabbar = TabBarController()
         tabbar.modalPresentationStyle = .fullScreen
-        self.present(tabbar, animated: true)
+        
+        let vc = LocationViewController()
+        self.present(vc, animated: true)
         
     }
 }
