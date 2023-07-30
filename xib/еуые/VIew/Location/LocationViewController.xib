@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LocationViewController" customModule="еуые" customModuleProvider="target">
+            <connections>
+                <outlet property="mapView" destination="d7B-mX-vEG" id="a8R-sN-nwJ"/>
+                <outlet property="view" destination="iN0-l3-epB" id="bAj-vk-Xrm"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d7B-mX-vEG">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <standardMapConfiguration key="preferredConfiguration"/>
+                </mapView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQF-GL-nnN">
+                    <rect key="frame" x="311" y="320" width="35" height="35"/>
+                    <color key="backgroundColor" red="0.028058186339999999" green="0.0063195155450000004" blue="0.17463583899999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="INM-TR-P43"/>
+                        <constraint firstAttribute="width" constant="35" id="V4h-pJ-X2L"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="+"/>
+                    <connections>
+                        <action selector="plusZoomAction:" destination="-1" eventType="touchUpInside" id="9BL-np-6Gb"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jAg-NZ-5cz">
+                    <rect key="frame" x="313" y="409" width="32" height="35"/>
+                    <color key="backgroundColor" red="0.028058186339999999" green="0.0063195155450000004" blue="0.17463583899999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="32" id="0fk-sH-Faf"/>
+                        <constraint firstAttribute="height" constant="35" id="cjK-EH-akY"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="-"/>
+                    <connections>
+                        <action selector="minusZoomAction:" destination="-1" eventType="touchUpInside" id="d61-Ls-vlD"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4UG-bN-3IO">
+                    <rect key="frame" x="313" y="675" width="47" height="39"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="47" id="GG7-qX-N4l"/>
+                        <constraint firstAttribute="height" constant="39" id="rM6-81-P2y"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="square.and.arrow.up.on.square" catalog="system"/>
+                    <connections>
+                        <action selector="flipMAp:" destination="-1" eventType="touchUpInside" id="89d-W5-KcS"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemGreenColor"/>
+            <constraints>
+                <constraint firstItem="d7B-mX-vEG" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="6cD-hf-3D0"/>
+                <constraint firstItem="jAg-NZ-5cz" firstAttribute="top" secondItem="NQF-GL-nnN" secondAttribute="bottom" constant="54" id="AyZ-1v-Zc7"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="4UG-bN-3IO" secondAttribute="bottom" constant="104" id="BDA-1I-oPa"/>
+                <constraint firstItem="d7B-mX-vEG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="BNA-DA-PEP"/>
+                <constraint firstItem="d7B-mX-vEG" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="KL0-kh-fyW"/>
+                <constraint firstItem="NQF-GL-nnN" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="311" id="X3M-7z-QbY"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="jAg-NZ-5cz" secondAttribute="trailing" constant="48" id="pbO-iR-FSU"/>
+                <constraint firstAttribute="bottom" secondItem="d7B-mX-vEG" secondAttribute="bottom" id="quQ-CR-0LP"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="4UG-bN-3IO" secondAttribute="trailing" constant="33" id="tr4-Jt-vfx"/>
+                <constraint firstItem="NQF-GL-nnN" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="261" id="x9g-LF-4U9"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="NQF-GL-nnN" secondAttribute="trailing" constant="47" id="yqJ-10-KzH"/>
+            </constraints>
+            <point key="canvasLocation" x="130.53435114503816" y="-11.267605633802818"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="square.and.arrow.up.on.square" catalog="system" width="119" height="128"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -24,6 +24,7 @@
 		B27F6CEA2A6E5F2200998EA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B27F6CE92A6E5F2200998EA5 /* Assets.xcassets */; };
 		B27F6CED2A6E5F2200998EA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B27F6CEB2A6E5F2200998EA5 /* LaunchScreen.storyboard */; };
 		B2A4866B2A730CCD00622893 /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2A4866A2A730CCD00622893 /* CustomView.xib */; };
+		B2ADC8F62A76CFCF0028BCA1 /* LocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2ADC8F52A76CFCF0028BCA1 /* LocationViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		B27F6CEC2A6E5F2200998EA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B27F6CEE2A6E5F2200998EA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2A4866A2A730CCD00622893 /* CustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
+		B2ADC8F52A76CFCF0028BCA1 /* LocationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				B21FBDEF2A75917700891FEE /* LocationViewController.swift */,
+				B2ADC8F52A76CFCF0028BCA1 /* LocationViewController.xib */,
 			);
 			path = Location;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B27F6CED2A6E5F2200998EA5 /* LaunchScreen.storyboard in Resources */,
+				B2ADC8F62A76CFCF0028BCA1 /* LocationViewController.xib in Resources */,
 				B25F11262A730368000C3CDD /* Picker.xib in Resources */,
 				B21FBDED2A758F4700891FEE /* MemberViewController.xib in Resources */,
 				B27F6CEA2A6E5F2200998EA5 /* Assets.xcassets in Resources */,

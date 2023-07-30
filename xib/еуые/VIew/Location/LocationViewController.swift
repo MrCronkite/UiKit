@@ -7,17 +7,41 @@
 
 import UIKit
 import CoreLocation
+import MapKit
 
-final class LocationViewController: UIViewController {
+final class LocationViewController: UIViewController, MKMapViewDelegate {
+    
+    @IBOutlet weak var mapView: MKMapView!
     
     let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .gray
-        locationManager.delegate = self
         
+        //view.backgroundColor = .gray
+        locationManager.delegate = self
+        mapView.delegate = self
         requestLocationAuthorization()
+    }
+    
+    @IBAction func plusZoomAction(_ sender: Any) {
+        var region = mapView.region
+                region.span.latitudeDelta *= 0.8
+                region.span.longitudeDelta *= 0.8
+                mapView.setRegion(region, animated: true)
+    }
+    
+    @IBAction func minusZoomAction(_ sender: Any) {
+        var region = mapView.region
+                region.span.latitudeDelta *= 1.25
+                region.span.longitudeDelta *= 1.25
+                mapView.setRegion(region, animated: true)
+        print("hello")
+    }
+    
+    @IBAction func flipMAp(_ sender: Any) {
+        print("hello")
+        mapView.camera.heading = 180.0
     }
 }
 
@@ -36,6 +60,8 @@ extension LocationViewController {
     func startUpdatingLocation() {
         locationManager.startUpdatingLocation()
     }
+    
+    
 }
 
 extension LocationViewController: CLLocationManagerDelegate {
@@ -51,13 +77,13 @@ extension LocationViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         // Вызывается, когда получены обновления геопозиции
            if  let lastLocation = locations.last{
-               let geoCoder = CLGeocoder()
-               geoCoder.reverseGeocodeLocation(lastLocation){ placemarks,error in
-                   if let placemark = placemarks?.first{
-                       let adress = "\(placemark.locality ?? "") \(placemark.thoroughfare ?? "")"
-                       print(adress)
-                   }
-               }
+               print("Me")
+               let latitude = lastLocation.coordinate.latitude
+               let longitude = lastLocation.coordinate.longitude
+               let anotation = MKPointAnnotation()
+               anotation.coordinate = .init(latitude: latitude, longitude: longitude)
+               anotation.title = "Me"
+               mapView.addAnnotation(anotation)
            }
        }
     

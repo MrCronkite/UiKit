@@ -2,7 +2,9 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,14 +19,55 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QEs-wm-lJW">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <standardMapConfiguration key="preferredConfiguration"/>
+                </mapView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eGx-ed-mOl">
+                    <rect key="frame" x="337" y="453" width="40" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jmx-ON-xiv">
+                            <rect key="frame" x="5" y="5" width="30" height="30"/>
+                            <color key="backgroundColor" red="0.028058186339999999" green="0.0063195155450000004" blue="0.17463583899999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="plus.square.dashed" catalog="system">
+                                <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="jmx-ON-xiv" firstAttribute="top" secondItem="eGx-ed-mOl" secondAttribute="top" constant="5" id="Eo4-tX-z3f"/>
+                        <constraint firstAttribute="width" constant="40" id="dX0-fF-YNZ"/>
+                        <constraint firstAttribute="trailing" secondItem="jmx-ON-xiv" secondAttribute="trailing" constant="5" id="gPW-6L-kcb"/>
+                        <constraint firstAttribute="height" constant="40" id="kdN-Hf-FR4"/>
+                        <constraint firstItem="jmx-ON-xiv" firstAttribute="leading" secondItem="eGx-ed-mOl" secondAttribute="leading" constant="5" id="tPa-sw-1r8"/>
+                        <constraint firstAttribute="bottom" secondItem="jmx-ON-xiv" secondAttribute="bottom" constant="5" id="wFE-6q-fxG"/>
+                    </constraints>
+                </view>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" systemColor="tintColor"/>
-            <point key="canvasLocation" x="132" y="-11"/>
+            <color key="backgroundColor" systemColor="systemPurpleColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="QEs-wm-lJW" secondAttribute="bottom" id="9Qt-e8-FL8"/>
+                <constraint firstItem="eGx-ed-mOl" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="394" id="A4C-QN-cY5"/>
+                <constraint firstItem="QEs-wm-lJW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="EcQ-UC-n9K"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="eGx-ed-mOl" secondAttribute="trailing" constant="16" id="JB4-5W-hcU"/>
+                <constraint firstItem="QEs-wm-lJW" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Nuz-ML-qJe"/>
+                <constraint firstItem="QEs-wm-lJW" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="XDK-Oa-10Q"/>
+            </constraints>
+            <point key="canvasLocation" x="130.53435114503816" y="-11.267605633802818"/>
         </view>
     </objects>
     <resources>
-        <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <image name="plus.square.dashed" catalog="system" width="128" height="114"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
