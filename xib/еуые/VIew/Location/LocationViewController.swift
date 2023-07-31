@@ -18,9 +18,11 @@ final class LocationViewController: UIViewController, MKMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //view.backgroundColor = .gray
         locationManager.delegate = self
         mapView.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+        
         requestLocationAuthorization()
     }
     
@@ -42,6 +44,31 @@ final class LocationViewController: UIViewController, MKMapViewDelegate {
     @IBAction func flipMAp(_ sender: Any) {
         print("hello")
         mapView.camera.heading = 180.0
+    }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        guard let annotation = annotation as? CustomAnnotaion else {
+            return nil
+        }
+        
+        let identifier = "customAnnotation"
+        var annotationView: MKAnnotationView
+        
+        if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) {
+            dequeuedView.annotation = annotation
+            annotationView = dequeuedView
+        } else {
+            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            annotationView.canShowCallout = true
+            annotationView.layer.cornerRadius = 10
+            annotationView.backgroundColor = .gray
+            annotationView.image = annotation.image // Устанавливаем картинку для аннотации
+            
+            annotationView.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
+            
+        }
+        
+        return annotationView
     }
 }
 
@@ -77,13 +104,15 @@ extension LocationViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         // Вызывается, когда получены обновления геопозиции
            if  let lastLocation = locations.last{
-               print("Me")
+               let region = MKCoordinateRegion(center: lastLocation.coordinate, latitudinalMeters: 1000, longitudinalMeters: 1000)
+               mapView.setRegion(region, animated: true)
+
                let latitude = lastLocation.coordinate.latitude
                let longitude = lastLocation.coordinate.longitude
-               let anotation = MKPointAnnotation()
-               anotation.coordinate = .init(latitude: latitude, longitude: longitude)
-               anotation.title = "Me"
+               let coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+               let anotation = CustomAnnotaion(coordinate: coordinate, title: "ME", subtitle: "Vladislav Shimchenko", image: UIImage(systemName: "scooter"))
                mapView.addAnnotation(anotation)
+               locationManager.stopUpdatingLocation()
            }
        }
     

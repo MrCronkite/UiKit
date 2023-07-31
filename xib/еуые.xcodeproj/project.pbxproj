@@ -14,6 +14,7 @@
 		B21FBDF02A75917700891FEE /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21FBDEF2A75917700891FEE /* LocationViewController.swift */; };
 		B22DC9DC2A705F2C008AA833 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22DC9DB2A705F2C008AA833 /* CustomView.swift */; };
 		B22DC9E02A705FDF008AA833 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22DC9DF2A705FDF008AA833 /* UIViewExtension.swift */; };
+		B23576742A782DD900690DFA /* CustomAnnotaion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23576732A782DD900690DFA /* CustomAnnotaion.swift */; };
 		B25F111F2A72ECDB000C3CDD /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25F111E2A72ECDB000C3CDD /* TabBarController.swift */; };
 		B25F11242A7302FE000C3CDD /* Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25F11232A7302FE000C3CDD /* Picker.swift */; };
 		B25F11262A730368000C3CDD /* Picker.xib in Resources */ = {isa = PBXBuildFile; fileRef = B25F11252A730368000C3CDD /* Picker.xib */; };
@@ -35,6 +36,7 @@
 		B21FBDEF2A75917700891FEE /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		B22DC9DB2A705F2C008AA833 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		B22DC9DF2A705FDF008AA833 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		B23576732A782DD900690DFA /* CustomAnnotaion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotaion.swift; sourceTree = "<group>"; };
 		B25F111E2A72ECDB000C3CDD /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		B25F11232A7302FE000C3CDD /* Picker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picker.swift; sourceTree = "<group>"; };
 		B25F11252A730368000C3CDD /* Picker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Picker.xib; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 			children = (
 				B21FBDEF2A75917700891FEE /* LocationViewController.swift */,
 				B2ADC8F52A76CFCF0028BCA1 /* LocationViewController.xib */,
+				B23576732A782DD900690DFA /* CustomAnnotaion.swift */,
 			);
 			path = Location;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 				B21FBDE72A7586A800891FEE /* MemberViewController.swift in Sources */,
 				B25F111F2A72ECDB000C3CDD /* TabBarController.swift in Sources */,
 				B27F6CE12A6E5F2000998EA5 /* AppDelegate.swift in Sources */,
+				B23576742A782DD900690DFA /* CustomAnnotaion.swift in Sources */,
 				B27F6CE32A6E5F2000998EA5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

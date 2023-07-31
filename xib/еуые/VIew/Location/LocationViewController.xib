@@ -58,7 +58,7 @@
                         <constraint firstAttribute="height" constant="39" id="rM6-81-P2y"/>
                     </constraints>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" image="square.and.arrow.up.on.square" catalog="system"/>
+                    <buttonConfiguration key="configuration" style="plain" image="wake" catalog="system"/>
                     <connections>
                         <action selector="flipMAp:" destination="-1" eventType="touchUpInside" id="89d-W5-KcS"/>
                     </connections>
@@ -83,7 +83,7 @@
         </view>
     </objects>
     <resources>
-        <image name="square.and.arrow.up.on.square" catalog="system" width="119" height="128"/>
+        <image name="wake" catalog="system" width="128" height="123"/>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
